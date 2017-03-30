@@ -311,5 +311,8 @@ class SecretaresseModel extends AbstractModel {
     $afdelingen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Afdeling');
     return $afdelingen;
     }
+	
+	
+	// Pls stop casey, u are dumb!.
 
 }
