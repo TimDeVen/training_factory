@@ -3,7 +3,7 @@
     margin:0;
 }
 body {
-    width:1020px;
+    min-width:1020px;
     margin:20px auto;
     background-color:white;
     font-family: Verdana,sans-serif;
@@ -14,11 +14,9 @@ em{
     font-style:normal;
 }
 header{
-    border-bottom:5px solid red;
     padding:10px 5px 5px 5px;
     overflow: auto;
     width: 100%;
-    background-color: red;
     box-sizing:border-box;  
 }
 header div{
@@ -59,7 +57,6 @@ header a{
 nav{
     float:left;
     width:200px;
-    background-color: #ccffcc;
     padding: 10px 0;
 }
 nav li{
@@ -93,16 +90,13 @@ nav ul li>ul{
 body>section{
     overflow: auto;
     width: 100%;
-   background-color:#e0fbfd; 
 }
 footer{
     text-align:right;
     font-size: 0.5em;
     padding:10px 0;
-    background-color:#fa1c05
 }
 body>section>#content { 
     padding:20px 0px 20px 0;
-    width:820px;
-    border-left:200px solid #ccffcc;       
+    width:820px;    
 }
