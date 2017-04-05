@@ -3,32 +3,39 @@
  * dat is uiterst hinderlijk als je verwacht dat de methode class_exsists true of false returnt
  * dat doet deze methode dan dus niet; er ontstaat een logicexception
  */
-include "framework/config.php";
-
-function __autoload($className) {
+include "ao/php/framework/config.php";
+function __autoload($className)
+{
     $class = str_replace('\\',DIRECTORY_SEPARATOR,$className);
     $file = "$class.php";
-    if(file_exists($file)) {
+    if(file_exists($file)){
         include $file;
     }
 }
 
-$control = \filter_input(\INPUT_GET, 'control') ? : 'bezoeker';
-$action = \filter_input(\INPUT_GET, 'action') ? : 'default';
+
+$control =\filter_input(\INPUT_GET, 'control')?:'bezoeker' ; 
+$action = \filter_input(\INPUT_GET, 'action')?:'default' ;
+
 
 try{
    
-    $dispatcher = new \framework\controllers\ControlDispatcher($control, $action);
+    $dispatcher = new \ao\php\framework\controls\ControlDispatcher($control, $action);
     $dispatcher->dispatch(); 
-} catch (framework\error\FrameworkException $ex) {
+} 
+catch (ao\php\framework\error\FrameworkException $ex) {
     $error = $ex->getMessage();
     // zorg zelf e.v.t. voor een fout pagina 
     echo $error;
-} catch(\PDOException $e) {
+}
+catch(\PDOException $e)
+{
     $error = "er is iets misgegaan in met de database. Waarschuw de beheerder";
     // zorg zelf e.v.t. voor een fout pagina
      echo $error;
-} catch(\Exception $e) {
+}
+catch(\Exception $e)
+{
     $error = "er is uitzondering opgetreden. Ga je code na";
    // zorg zelf e.v.t. voor een fout pagina
      echo $error;

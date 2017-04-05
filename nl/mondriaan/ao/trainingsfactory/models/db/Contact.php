@@ -1,7 +1,7 @@
 <?php
-namespace framework\models\db;
+namespace nl\mondriaan\ao\trainingsfactory\models\db;
 
-class Contact extends Entiteit
+class Contact extends \ao\php\framework\models\db\Entiteit
 {
     protected $id;
     protected $gebruikersnaam;

@@ -1,7 +1,7 @@
 <?php
-namespace framework\models\db;
+namespace nl\mondriaan\ao\trainingsfactory\models\db;
 
-class Afdeling extends Entiteit
+class Afdeling extends \ao\php\framework\models\db\Entiteit
 {
     protected $id;
     protected $omschrijving;
