@@ -1,7 +1,7 @@
 <?php
-namespace framework\models;
+namespace nl\mondriaan\ao\trainingsfactory\models;
 
-class BezoekerModel extends AbstractModel
+class BezoekerModel extends  \ao\php\framework\models\AbstractModel
 {
     public function __construct($control, $action)
     {
@@ -22,7 +22,7 @@ class BezoekerModel extends AbstractModel
        }      
        
        $sql = "SELECT * FROM `contacten` WHERE `contacten`.`afdelings_id`= :aid  ORDER BY achternaam";
-       $stmnt = $this->db->prepare($sql);
+       $stmnt = $this->dbh->prepare($sql);
        $stmnt->bindParam(':aid',$aid);
        $stmnt->execute();
        $contacten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact');    
@@ -43,7 +43,7 @@ class BezoekerModel extends AbstractModel
         }      
        
         $sql = "SELECT * FROM `contacten` WHERE `contacten`.`id`= :id";
-        $stmnt = $this->db->prepare($sql);
+        $stmnt = $this->dbh->prepare($sql);
         $stmnt->bindParam(':id',$id);
         $stmnt->execute();
         $contacten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact'); 
@@ -57,7 +57,7 @@ class BezoekerModel extends AbstractModel
     public function getAfdelingen()
     {
        $sql = 'SELECT * FROM `afdelingen` ORDER BY naam';
-       $stmnt = $this->db->prepare($sql);
+       $stmnt = $this->dbh->prepare($sql);
        $stmnt->execute();
        $afdelingen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Afdeling');    
        return $afdelingen;
@@ -77,7 +77,7 @@ class BezoekerModel extends AbstractModel
        }  
        
        $sql = 'SELECT * FROM `afdelingen` WHERE `afdelingen`.`id`= :aid';
-       $stmnt = $this->db->prepare($sql);                      
+       $stmnt = $this->dbh->prepare($sql);                      
        $stmnt->bindParam(':aid',$aid);
        $stmnt->execute();
        $afdelingen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Afdeling'); 
@@ -91,7 +91,7 @@ class BezoekerModel extends AbstractModel
     public function getDirecteur() 
     {
        $sql = "SELECT * FROM `contacten` WHERE `contacten`.`recht`= 'directeur'";
-       $stmnt = $this->db->prepare($sql);
+       $stmnt = $this->dbh->prepare($sql);
        $stmnt->execute();
        $contacten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact');    
        return $contacten[0];
@@ -105,7 +105,7 @@ class BezoekerModel extends AbstractModel
         if ( ($gn!==null) && ($ww!==null) )
         {
              $sql = 'SELECT * FROM `contacten` WHERE `gebruikersnaam` = :gn AND `wachtwoord` = :ww';
-             $sth = $this->db->prepare($sql);
+             $sth = $this->dbh->prepare($sql);
              $sth->bindParam(':gn',$gn);
              $sth->bindParam(':ww',$ww);
              $sth->execute();

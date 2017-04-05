@@ -1,5 +1,5 @@
 <?php
-namespace framework\utils;
+namespace ao\php\framework\utils;
 final class Foto 
 {
     private function __construct()

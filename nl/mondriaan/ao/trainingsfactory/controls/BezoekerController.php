@@ -1,7 +1,7 @@
 <?php
-namespace framework\controllers;
+namespace nl\mondriaan\ao\trainingsfactory\controls;
 
-class BezoekerController extends AbstractController
+class BezoekerController extends \ao\php\framework\controls\AbstractController
 {
     public function __construct($control, $action, $message = NULL) {
         parent::__construct($control, $action, $message);
