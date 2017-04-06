@@ -34,6 +34,28 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
     
     protected function defaultAction()
     {
+        
+         if($this->model->isPostLeeg()) {
+           $this->view->set("msg","Vul uw gegevens in");
+        }
+        else
+        {   
+            $resultInlog=$this->model->controleerInloggen();
+            switch($resultInlog)
+            {
+                case REQUEST_SUCCESS:
+                     $this->view->set("msg","Welkom op de beheers applicatie. Veel werkplezier");
+                     $recht = $this->model->getGebruiker()->getRole();
+                     $this->forward("default", $recht);
+                     break;
+                case REQUEST_FAILURE_DATA_INVALID:
+                     $this->view->set("msg","Gegevens kloppen niet. Probeer opnieuw.");
+                     break;
+                case REQUEST_FAILURE_DATA_INCOMPLETE:
+                     $this->view->set("msg","niet alle gegevens ingevuld");
+                     break;
+            }
+        }
 
     }
     

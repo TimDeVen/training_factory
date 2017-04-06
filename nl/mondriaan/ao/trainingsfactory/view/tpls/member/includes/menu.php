@@ -17,7 +17,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="?control=medewerker&action=uitloggen">uitloggen</a>
+                    <a href="?control=member&action=uitloggen">uitloggen</a>
                 </li>
             </ul>
         </nav>
