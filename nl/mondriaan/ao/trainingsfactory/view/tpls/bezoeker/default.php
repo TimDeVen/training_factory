@@ -1,12 +1,7 @@
-<?php include 'includes/header.php';
-include 'includes/menu.php';?>
+<?php include 'includes/header.php';?>
         <section id='content'>
             <p> In progress </p>
-            <div>
-                <?php foreach($afdelingen as $afdeling):?>
-                <p>test</p>
-                <?php endforeach;?>
-            </div>
+
             <br id ="breaker" />
         </section>
 <?php include 'includes/footer.php';

@@ -1,15 +1,16 @@
 <?php
 namespace nl\mondriaan\ao\trainingsfactory\models\db;
 
-class Afdeling extends \ao\php\framework\models\db\Entiteit
+class Registration extends \ao\php\framework\models\db\Entiteit
 {
     protected $id;
-    protected $omschrijving;
-    protected $foto;
-    protected $afkorting;
-    protected $naam;
+    protected $payment;
+    protected $lesson_id;
+    protected $person_id;
+
     
     public function __construct() {
         $this->id = filter_var($this->id,FILTER_VALIDATE_INT);
     }
+
 }

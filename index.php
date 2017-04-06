@@ -30,9 +30,11 @@ catch (ao\php\framework\error\FrameworkException $ex) {
 }
 catch(\PDOException $e)
 {
+
     $error = "er is iets misgegaan in met de database. Waarschuw de beheerder";
     // zorg zelf e.v.t. voor een fout pagina
      echo $error;
+     echo $e;
 }
 catch(\Exception $e)
 {

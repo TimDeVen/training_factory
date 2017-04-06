@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Telefoonlijst</title>
+        <title>Traningfactory</title>
         <link rel="STYLESHEET" href="css/telefoonlijst.css" type="text/css">
         <link rel="STYLESHEET" href="css/bezoeker.css" type="text/css">
     </head>
@@ -11,12 +11,15 @@
             <figure>
                 <img src="img/mondriaan.jpg" alt="ons schoolgebouw aan de tinwerf 10 denhaag" />
             </figure>
-            <div>
-                <p>Wij zijn een school voor ICT bestaande uit twee afdelingen.</p>
-                <p>De afdeling <em>ICT beheer</em> en de afdeling <em>Applicatieontwikkeling</em>. Onze school heeft ongeveer 30 collega's verdeeld over beide afdelingen</p>
-                <p>De school heeft als manager <a href="?control=bezoeker&action=directeur"><em><?= $directeur->getNaam();?></em></a>
-                    <?=isset($msg)?"<p id = 'msg'><em>$msg</em></p>":""?>
-            </div>
+            <nav style="display:inline-block;">
+                <ul>
+                    <li><a href="default.asp">Home</a></li>
+                    <li><a href="news.asp">News</a></li>
+                    <li><a href="contact.asp">Contact</a></li>
+                    <li><a href="?control=bezoeker&action=">About</a></li>
+                    <li><a href="?control=bezoeker&action=inloggen">inloggen</a></li>
+                </ul>
+            </nav>
         </header>
         <section>
 

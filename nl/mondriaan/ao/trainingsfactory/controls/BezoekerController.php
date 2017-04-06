@@ -38,10 +38,7 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
     
     protected function defaultAction()
     {
-       $afdelingen=$this->model->getAfdelingen();
-       $this->view->set("afdelingen",$afdelingen);
-       $directeur = $this->model->getDirecteur();
-       $this->view->set("directeur",$directeur);
+       
     }
     
     protected function afdelingAction()
