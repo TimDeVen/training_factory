@@ -38,7 +38,7 @@ class SecretaresseController extends AbstractController
     {
         if($this->model->isPostLeeg())
         {
-           $this->view->set("msg","Vul gegevens in van een nieuwe medewerker");
+           $this->view->set("msg","Vul gegevens in van een nieuwe member");
         }
         else
         {   

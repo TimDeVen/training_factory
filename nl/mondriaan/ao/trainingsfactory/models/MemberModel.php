@@ -1,7 +1,8 @@
 <?php
-namespace framework\models;
+namespace nl\mondriaan\ao\trainingsfactory\models;
 
-class MedewerkerModel extends AbstractModel
+use ao\php\framework\models\AbstractModel;
+class MemberModel extends AbstractModel
 {
     public function __construct($control, $action) {
     parent::__construct($control, $action);
@@ -12,7 +13,7 @@ class MedewerkerModel extends AbstractModel
     if(isset($_SESSION['gebruiker'])&&!empty($_SESSION['gebruiker']))
     {
         $gebruiker=$_SESSION['gebruiker'];
-        if ($gebruiker->getRecht() == "medewerker")
+        if ($gebruiker->getRole() == "member")
         {
             return true;
         }

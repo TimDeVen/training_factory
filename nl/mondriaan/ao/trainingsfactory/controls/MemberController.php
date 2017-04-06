@@ -1,10 +1,9 @@
 <?php
-    namespace framework\controllers;
+    namespace nl\mondriaan\ao\trainingsfactory\controls;
     
-    use framework\models as MODELS;
-    use framework\view as VIEW;
+    use ao\php\framework\controls\AbstractController;
 
-class MedewerkerController extends AbstractController
+class MemberController extends AbstractController
 {
     
     public function __construct($control, $action, $message = null)

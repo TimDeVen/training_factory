@@ -104,13 +104,13 @@ class BezoekerModel extends  \ao\php\framework\models\AbstractModel
         
         if ( ($gn!==null) && ($ww!==null) )
         {
-             $sql = 'SELECT * FROM `contacten` WHERE `gebruikersnaam` = :gn AND `wachtwoord` = :ww';
+             $sql = 'SELECT * FROM `personen` WHERE `loginname` = :gn AND `password` = :ww';
              $sth = $this->dbh->prepare($sql);
              $sth->bindParam(':gn',$gn);
              $sth->bindParam(':ww',$ww);
              $sth->execute();
              
-             $result = $sth->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact');
+             $result = $sth->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Persoon');
              
              if(count($result) === 1)
              {   

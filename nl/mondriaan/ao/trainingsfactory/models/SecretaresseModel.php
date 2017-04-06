@@ -20,7 +20,7 @@ class SecretaresseModel extends AbstractModel {
            `afdelingen`.`naam` AS afdelings_naam ,
            `afdelingen`.`afkorting` AS afdelings_afkorting
             FROM `contacten` , `afdelingen` 
-            WHERE `contacten`.`recht`=\'medewerker\' AND `contacten`.`afdelings_id` = `afdelingen`.`id` 
+            WHERE `contacten`.`recht`=memembercontacten`.`afdelings_id` = `afdelingen`.`id` 
             ORDER BY afdelings_afkorting DESC, achternaam ASC';
     $stmnt = $this->db->prepare($sql);
     $stmnt->execute();
@@ -109,7 +109,7 @@ class SecretaresseModel extends AbstractModel {
 
     $sql="INSERT IGNORE INTO `contacten`  (gebruikersnaam,wachtwoord,voorletter,tussenvoegsel,achternaam,"
     . "extern,intern,email,foto,recht,afdelings_id)VALUES (:gebruikersnaam,:wachtwoord,:voorletter,:tussenvoegsel,:achternaam,"
-    . ":extern,:intern,:email,:foto,'medewerker',:afdeling) ";
+    . ":extern,:intern,:email,:foto,'medewerkmembering) ";
 
     $stmnt = $this->db->prepare($sql);
     $stmnt->bindParam(':gebruikersnaam', $gebruikersnaam);

@@ -19,7 +19,7 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
             {
                 case REQUEST_SUCCESS:
                      $this->view->set("msg","Welkom op de beheers applicatie. Veel werkplezier");
-                     $recht = $this->model->getGebruiker()->getRecht();
+                     $recht = $this->model->getGebruiker()->getRole();
                      $this->forward("default", $recht);
                      break;
                 case REQUEST_FAILURE_DATA_INVALID:
@@ -30,15 +30,11 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
                      break;
             }
         }
-        $afdelingen=$this->model->getAfdelingen();
-        $this->view->set("afdelingen",$afdelingen);
-        $directeur = $this->model->getDirecteur();
-        $this->view->set("directeur",$directeur);
     }
     
     protected function defaultAction()
     {
-       
+
     }
     
     protected function afdelingAction()
