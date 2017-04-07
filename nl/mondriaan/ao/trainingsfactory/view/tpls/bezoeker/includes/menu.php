@@ -1,13 +1,17 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
 
-    <ul class="nav navbar-nav">
-      <li><a href="?control=bezoeker&action=default">Home</a></li>
-      <li><a href="#">Trainings Aanbod</a></li>
-      <li><a href="?control=bezoeker&action=lidWorden">Lid worden</a></li>
-      <li><a href="?control=bezoeker&action=regels">Gedrags regels</a></li>
-      <li><a href="?control=bezoeker&action=contact">Locatie & Contact</a></li>
-    </ul>
+
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="?control=bezoeker&action=default">Home</a></li>
+          <li><a href="#">Trainings Aanbod</a></li>
+          <li><a href="?control=bezoeker&action=lidWorden">Lid worden</a></li>
+          <li><a href="#">Gedrags regels</a></li>
+          <li><a href="?control=bezoeker&action=contact">Locatie & Contact</a></li>
+        </ul>
+     </div>
+
   </div>
 </nav>
 
