@@ -8,6 +8,9 @@ body {
     background-color:white;
     font-family: Verdana,sans-serif;
     font-size:1em;
+    overflow:hidden!important;
+    overflow-y: hidden!important;
+    overflow-x: hidden!important;
 }
 em{
     font-weight:bold;
@@ -78,11 +81,7 @@ body>section{
     overflow: auto;
     width: 100%;
 }
-footer{
-    text-align:right;
-    font-size: 0.5em;
-    padding:10px 0;
-}
+
 body>section>#content { 
     padding:20px 0px 20px 0;
     width:820px;    
@@ -110,4 +109,7 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
+}
+p {
+    text-align: justify;
 }

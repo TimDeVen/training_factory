@@ -1,6 +1,35 @@
 
-    </body>
-    <footer>
-        &copy;afdeling applicatieontwikkelaar Tinwerf 10, 2544 ED Den Haag. Telefoon:088 666 3600
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                <ul>
+                    <li>
+                        Yo
+                    </li>
+
+                </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <ul>
+                        <li>
+                            Yo
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <ul>
+                        <li>
+                            Yo
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </footer>
 </html>
