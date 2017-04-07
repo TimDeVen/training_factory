@@ -18,35 +18,35 @@
     <div class="form-group">
         <label for="firstname" class="col-sm-3 control-label">Voornaam</label>
         <div class="col-sm-9">
-            <input type="text" id="firstname" placeholder="" class="form-control" autofocus>
+            <input name="firstname" type="text" id="firstname" placeholder="" class="form-control" autofocus>
         </div>
     </div>
 
     <div class="form-group">
         <label for="preprovision" class="col-sm-3 control-label">Tussenvoegsel</label>
         <div class="col-sm-9">
-            <input type="text" id="preprovision" placeholder="" class="form-control">
+            <input name="preprovision" type="text" id="preprovision" placeholder="" class="form-control">
         </div>
     </div>
 
     <div class="form-group">
         <label for="lastname" class="col-sm-3 control-label">Achternaam</label>
         <div class="col-sm-9">
-            <input type="text" id="lastname" placeholder="" class="form-control">
+            <input name="lastname" type="text" id="lastname" placeholder="" class="form-control">
         </div>
     </div>
 
     <div class="form-group">
         <label for="dateofbirth" class="col-sm-3 control-label">Geboortedatum</label>
         <div class="col-sm-9">
-            <input type="date" id="dateofbirth" placeholder="" class="form-control">
+            <input name="" type="date" id="dateofbirth" placeholder="" class="form-control">
         </div>
     </div>
 
     <div class="form-group">
-        <label for="loginname" class="col-sm-3 control-label">Gebruikersmaam</label>
+        <label for="loginname" class="col-sm-3 control-label">Gebruikersnaam</label>
         <div class="col-sm-9">
-            <input type="text" id="loginname" placeholder="" class="form-control">
+            <input name="loginname" type="text" id="loginname" placeholder="" class="form-control">
             <p>Dit is je login naam</p>
         </div>
     </div>
@@ -54,7 +54,7 @@
     <div class="form-group">
         <label for="password" class="col-sm-3 control-label">Wachtwoord</label>
         <div class="col-sm-9">
-            <input type="text" id="password" placeholder="" class="form-control">
+            <input name="password" type="text" id="password" placeholder="" class="form-control">
             <p>Dit is je wachtwoord waarmee je inlogt</p>
         </div>
     </div>
@@ -65,12 +65,12 @@
             <div class="row">
                 <div class="col-sm-4">
                     <label class="radio-inline">
-                        <input type="radio" id="Woman" value="Woman">Vrouw
+                        <input name="gender" type="radio" id="Woman" value="Woman">Vrouw
                     </label>
                 </div>
                 <div class="col-sm-4">
                     <label class="radio-inline">
-                        <input type="radio" id="Man" value="Man">Man
+                        <input name="gender" type="radio" id="Man" value="Man">Man
                     </label>
                 </div>
             </div>
@@ -80,14 +80,14 @@
     <div class="form-group">
         <label for="street" class="col-sm-3 control-label">Straat</label>
         <div class="col-sm-9">
-            <input type="text" id="street" placeholder="" class="form-control" autofocus>
+            <input name="street" type="text" id="street" placeholder="" class="form-control" autofocus>
         </div>
     </div>
 
     <div class="form-group">
         <label for="postal_code" class="col-sm-3 control-label">Postcode</label>
         <div class="col-sm-9">
-            <input type="text" id="postal_code" placeholder="" class="form-control" autofocus>
+            <input name="" type="text" id="postal_code" placeholder="" class="form-control" autofocus>
         </div>
     </div>
 

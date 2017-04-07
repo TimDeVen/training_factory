@@ -62,7 +62,29 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
 
     protected function lidWordenAction()
     {
-
+        if($this->model->isPostLeeg())
+        {
+            $this->view->set("boodschap","Vul uw gegevens in");
+        }
+        else
+        {
+            $result=$this->model->registreren();
+            switch($result)
+            {
+                case REQUEST_SUCCESS:
+                    $this->view->set("boodschap","U bent successvol geregistreerd!");
+                    $this->forward("default");
+                    break;
+                case REQUEST_FAILURE_DATA_INVALID:
+                    $this->view->set('form_data',$_POST);
+                    $this->view->set("boodschap","emailadres niet correct of gebruikersnaam bestaat al");
+                    break;
+                case REQUEST_FAILURE_DATA_INCOMPLETE:
+                    $this->view->set('form_data',$_POST);
+                    $this->view->set("boodschap","Niet alle gegevens ingevuld");
+                    break;
+            }
+        }
     }
 
     protected function contactAction()
