@@ -67,7 +67,11 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
 
     protected function contactAction()
     {
-      
+
     }
 
+    protected function regelsAction()
+    {
+      
+    }
 }
