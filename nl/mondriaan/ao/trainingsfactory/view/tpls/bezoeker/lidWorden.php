@@ -107,7 +107,7 @@
 
         <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
-                <button type="submit" class="btn btn-primary btn-block">Registreer</button>
+                <button type="submit" class="btn btn-primary btn-block buttonaanpassing">Registreer</button>
             </div>
         </div>
     </form>
