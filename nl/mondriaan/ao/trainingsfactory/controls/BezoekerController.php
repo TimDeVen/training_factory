@@ -107,4 +107,10 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
         $this->view->set("directeur",$directeur);
         $this->view->set("contact",$directeur);
     }
+    
+    protected function lidWordenAction()
+    {
+        
+    }
+    
 }
