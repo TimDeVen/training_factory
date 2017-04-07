@@ -1,6 +1,6 @@
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/menu.php'; ?>
-    
+
 
 
 
@@ -10,8 +10,8 @@
       Om gebruik te kunnen maken van de lessen moet je bij ons bekend zijn.<br/>
       Vul hieronder alle gegevens in en registreer jezelf.
   </p>
-  
-  
+
+
  <form class="form-horizontal" role="form">
     <h2>Registreren</h2>
 
@@ -21,7 +21,7 @@
             <input type="text" id="firstname" placeholder="" class="form-control" autofocus>
         </div>
     </div>
-                
+
     <div class="form-group">
         <label for="preprovision" class="col-sm-3 control-label">Tussenvoegsel</label>
         <div class="col-sm-9">
@@ -42,7 +42,7 @@
             <input type="date" id="dateofbirth" placeholder="" class="form-control">
         </div>
     </div>
-                
+
     <div class="form-group">
         <label for="loginname" class="col-sm-3 control-label">Gebruikersmaam</label>
         <div class="col-sm-9">
@@ -76,7 +76,7 @@
             </div>
         </div>
     </div>
-                
+
     <div class="form-group">
         <label for="street" class="col-sm-3 control-label">Straat</label>
         <div class="col-sm-9">
@@ -97,7 +97,7 @@
             <input type="text" id="place" placeholder="" class="form-control" autofocus>
         </div>
     </div>
-  
+
     <div class="form-group">
         <label for="emailadress" class="col-sm-3 control-label">Email</label>
         <div class="col-sm-9">
@@ -111,8 +111,8 @@
             </div>
         </div>
     </form>
-  
+
 </div>
-    
+
 </body>
 </html>

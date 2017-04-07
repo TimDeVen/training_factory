@@ -13,7 +13,7 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
            $this->view->set("msg","Vul uw gegevens in");
         }
         else
-        {   
+        {
             $resultInlog=$this->model->controleerInloggen();
             switch($resultInlog)
             {
@@ -31,15 +31,15 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
             }
         }
     }
-    
+
     protected function defaultAction()
     {
-        
+
          if($this->model->isPostLeeg()) {
            $this->view->set("msg","Vul uw gegevens in");
         }
         else
-        {   
+        {
             $resultInlog=$this->model->controleerInloggen();
             switch($resultInlog)
             {
@@ -58,59 +58,16 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
         }
 
     }
-    
-    protected function afdelingAction()
-    {
-       $directeur = $this->model->getDirecteur();
-       $this->view->set("directeur",$directeur);
-       
-       $afdelingen=$this->model->getAfdelingen();
-       $this->view->set("afdelingen",$afdelingen);
-       
-       $contacten = $this->model->getContacten();
-       if($contacten===REQUEST_FAILURE_DATA_INCOMPLETE || $contacten===REQUEST_FAILURE_DATA_INVALID)
-       {          
-               $this->view->set("msg","opvragen contacten is niet gelukt!");
-               $this->forward("default", "bezoeker");
-       }
-       $this->view->set("contacten",$contacten);
-              
-       $team = $this->model->getAfdeling();
-       if($team===REQUEST_FAILURE_DATA_INCOMPLETE || $team===REQUEST_FAILURE_DATA_INVALID)
-       {          
-               $this->view->set("msg","opvragen afdeling is niet gelukt!");
-               $this->forward("default", "bezoeker");
-       }
-       $this->view->set("team",$team);              
-    }
-    
-    protected function detailsAction()
-    {
-        $directeur = $this->model->getDirecteur();
-        $this->view->set("directeur",$directeur);
-        $afdelingen=$this->model->getAfdelingen();
-        $this->view->set("afdelingen",$afdelingen);
-        $contact = $this->model->getContact();
-        if($contact===REQUEST_FAILURE_DATA_INCOMPLETE || $contact===REQUEST_FAILURE_DATA_INVALID)
-        {          
-               $this->view->set("msg","opvragen persoon is niet gelukt!");
-               $this->forward("default", "bezoeker");
-        }
-        $this->view->set("contact",$contact);
-    }
-    
-    protected function directeurAction()
-    {
-        $afdelingen=$this->model->getAfdelingen();
-        $this->view->set("afdelingen",$afdelingen);
-        $directeur = $this->model->getDirecteur();
-        $this->view->set("directeur",$directeur);
-        $this->view->set("contact",$directeur);
-    }
-    
+
+
     protected function lidWordenAction()
     {
-        
+
     }
-    
+
+    protected function contactAction()
+    {
+      
+    }
+
 }
