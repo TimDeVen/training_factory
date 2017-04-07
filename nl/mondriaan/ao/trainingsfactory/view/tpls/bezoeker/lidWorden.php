@@ -14,7 +14,6 @@
 <body>
     
 <style>
-
 .form-control{
     margin-top: 15px;
     width: 75%;
@@ -66,21 +65,38 @@ input[type=submit].btn-block {
   <div class="container-fluid">
     
     <ul class="nav navbar-nav">
-      <li class="active"><a href="?control=bezoeker&action=default">Home</a></li>
+      <li><a href="?control=bezoeker&action=default">Home</a></li>
       <li><a href="#">Trainings Aanbod</a></li>
-      <li><a href="?control=bezoeker&action=lidWorden">Lid worden</a></li>
+      <li class="active"><a href="?control=bezoeker&action=lidWorden">Lid worden</a></li>
       <li><a href="#">Gedrags regels</a></li>
       <li><a href="#">Locatie & Contact</a></li>
     </ul>
   </div>
 </nav>
+
+
+<div class="row">
+    <div class="col-xs-6 col-md-4">
+        <center><img src="img/vechtsport1.jpg" alt="" width="250px" height="200px"/></center>
+        
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <img src="img/vechtsport2.jpg" alt="" width="500px" height="200px"/>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <center><img src="img/vechtsport3.jpg" alt="" width="250px" height="200px"/></center>
+    </div>
+    
+</div>
+
+
   
 <div class="container">
-  <h3>Welkom bij Trainingscentrum Den Haag</h3>
+  <h3>Lid Worden</h3>
   <p>
-    Den Haag Training Center is een sportschool waar onder professionele begeleiding in een veilige
-    omgeving<br/> verschillende soorten martial arts-, indoor bootcamp, personal- en small group
-    trainingen worden aangeboden.<br/> Hier kan je je inschrijven op een les of uitschrijven op een les.
+    
   </p>
 </div>
     
