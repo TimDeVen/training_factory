@@ -44,43 +44,47 @@ class BezoekerModel extends  \ao\php\framework\models\AbstractModel
         $password=filter_input(INPUT_POST, 'password');
         $gender=filter_input(INPUT_POST,'gender');
         $street=filter_input(INPUT_POST,'street');
-        $tel=filter_input(INPUT_POST,'tel');
-        $pc=filter_input(INPUT_POST,'pc');
-        $plaats=filter_input(INPUT_POST,'plaats');
+        $postal=filter_input(INPUT_POST,'postal');
+        $email=filter_input(INPUT_POST,'email');
+        $dateofbirth=filter_input(INPUT_POST,'dateofbirth');
 
-        if($gn===null || $vl===null || $an===null || $adres===null ||$email===null ||$plaats===null|| $pc===null)
+        var_dump($_POST);
+
+        if($firstname===null || $preprovision===null)
         {
             return REQUEST_FAILURE_DATA_INCOMPLETE;
         }
 
-        if( $email===false)
+        if($gender===false)
         {
             return REQUEST_FAILURE_DATA_INVALID;
         }
 
-        if(empty($ww))
+        if(empty($password))
         {
-            $sql=   "INSERT INTO `gebruikers`  (gebruikersnaam,voorletters,tussenvoegsel,achternaam, 
-                adres,email,telefoon,postcode,woonplaats,recht)VALUES (:gebruikersnaam,:voorletters,:tussenvoegsel,:achternaam, 
-                :adres,:email,:telefoon,:postcode,:plaats,'deelnemer') ";
-            $stmnt = $this->db->prepare($sql);
+            $sql=   "INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
+                password,gender,street,postal,email,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
+                :password,:gender,:street,:postal,:email,:dateofbirth,:email,'member') ";
+            $stmnt = $this->dbh->prepare($sql);
         }
         else{
-            $sql=   "INSERT INTO `gebruikers`  (gebruikersnaam,wachtwoord,voorletters,tussenvoegsel,achternaam, 
-                adres,email,telefoon,postcode,woonplaats,recht)VALUES (:gebruikersnaam,:wachtwoord,:voorletters,:tussenvoegsel,:achternaam, 
-                :adres,:email,:telefoon,:postcode,:plaats,'deelnemer') ";
-            $stmnt = $this->db->prepare($sql);
-            $stmnt->bindParam(':wachtwoord', $ww);
+            $sql=   "INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
+                password,gender,street,postal,email,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
+                :password,:gender,:street,:postal,:email,:dateofbirth,:email,'member') ";
+            $stmnt = $this->dbh->prepare($sql);
+            $stmnt->bindParam(':password', $password);
         }
-        $stmnt->bindParam(':gebruikersnaam', $gn);
-        $stmnt->bindParam(':voorletters', $vl);
-        $stmnt->bindParam(':tussenvoegsel', $tv);
-        $stmnt->bindParam(':achternaam', $an);
-        $stmnt->bindParam(':adres', $adres);
-        $stmnt->bindParam(':telefoon', $tel);
+        $stmnt->bindParam(':firstname', $firstname);
+        $stmnt->bindParam(':preprovision', $preprovision);
+        $stmnt->bindParam(':lastname', $lastname);
+        $stmnt->bindParam(':loginname', $loginname);
+        $stmnt->bindParam(':gender', $gender);
+        $stmnt->bindParam(':street', $street);
         $stmnt->bindParam(':email', $email);
-        $stmnt->bindParam(':postcode', $pc);
-        $stmnt->bindParam(':plaats', $plaats);
+        $stmnt->bindParam(':postal', $postal);
+        $stmnt->bindParam(':email', $email);
+        $stmnt->bindParam(':email', $email);
+        $stmnt->bindParam(':dateofbirth', $dateofbirth);
 
         try
         {

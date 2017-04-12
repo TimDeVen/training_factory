@@ -12,7 +12,7 @@
   </p>
 
 
- <form class="form-horizontal" role="form">
+ <form class="form-horizontal" role="form" method="POST" action="">
     <h2>Registreren</h2>
 
     <div class="form-group">
@@ -39,7 +39,7 @@
     <div class="form-group">
         <label for="dateofbirth" class="col-sm-3 control-label">Geboortedatum</label>
         <div class="col-sm-9">
-            <input name="" type="date" id="dateofbirth" placeholder="" class="form-control">
+            <input name="dateofbirth" type="date" id="dateofbirth" placeholder="" class="form-control">
         </div>
     </div>
 
@@ -87,21 +87,21 @@
     <div class="form-group">
         <label for="postal_code" class="col-sm-3 control-label">Postcode</label>
         <div class="col-sm-9">
-            <input name="" type="text" id="postal_code" placeholder="" class="form-control" autofocus>
+            <input name="postal" type="text" id="postal_code" placeholder="" class="form-control" autofocus>
         </div>
     </div>
 
     <div class="form-group">
         <label for="place" class="col-sm-3 control-label">Stad</label>
         <div class="col-sm-9">
-            <input type="text" id="place" placeholder="" class="form-control" autofocus>
+            <input name="place" type="text" id="place" placeholder="" class="form-control" autofocus>
         </div>
     </div>
 
     <div class="form-group">
         <label for="emailadress" class="col-sm-3 control-label">Email</label>
         <div class="col-sm-9">
-            <input type="email" id="emailadress" placeholder="" class="form-control" autofocus>
+            <input name="email" type="email" id="emailadress" placeholder="" class="form-control" autofocus>
         </div>
     </div>
 
