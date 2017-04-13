@@ -18,20 +18,22 @@
             <th>gebruikersnaam</th>
             <th>place</th>
             <th>emailadress</th>
+            <th>Role</th>
             <th></th>
             <th></th>
         </tr>
         </thead>
         <tbody>
         <?php
-        foreach ($lessen as $les) {?>
+        foreach ($users as $user) {?>
             <tr>
-                <td> <?php echo $les->getDate(); ?></td>
-                <td> <?php echo $les->getLocation(); ?></td>
-                <td> <?php echo $les->getTime(); ?></td>
-                <td> <?php echo $les->getMaxPersons(); ?></td>
-                <td><a href="?control=instructeur&action=verwijder&id=<?php echo $les->getId(); ?>" >Verwijder</a></td>
-                <td><a href="?control=instructeur&action=wijzig&id=<?php echo $les->getId(); ?>" >Wijzig</a></td>
+                <td> <?php echo $user->getName(); ?></td>
+                <td> <?php echo $user->getLoginname(); ?></td>
+                <td> <?php echo $user->getPlace(); ?></td>
+                <td> <?php echo $user->getEmailadress(); ?></td>
+                <td> <?php echo $user->getRole(); ?></td>
+                <td><a href="?control=administrator&action=delete&id=<?php echo $user->getId(); ?>" >Verwijder</a></td>
+                <td><a href="?control=administrator&action=wijzig&id=<?php echo $user->getId(); ?>" >Wijzig</a></td>
             </tr>
         <?php }
         ?>

@@ -7,30 +7,25 @@ class AdministratorModel extends AbstractModel {
 
     public function __construct($control, $action)
     {
-    $this->control = $control;
-    $this->action = $action;
-    $this->db = new \PDO(DATA_SOURCE_NAME, DB_USERNAME, DB_PASSWORD);
-    $this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-    $this->startSession();
+        $this->control = $control;
+        $this->action = $action;
+        $this->dbh = new \PDO(DATA_SOURCE_NAME, DB_USERNAME, DB_PASSWORD);
+        $this->dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $this->startSession();
     }
 
-    public function getContacten()
+    public function getUsers()
     {
-    $sql = 'SELECT `contacten`.*, 
-           `afdelingen`.`naam` AS afdelings_naam ,
-           `afdelingen`.`afkorting` AS afdelings_afkorting
-            FROM `contacten` , `afdelingen` 
-            WHERE `contacten`.`recht`=memembercontacten`.`afdelings_id` = `afdelingen`.`id` 
-            ORDER BY afdelings_afkorting DESC, achternaam ASC';
-    $stmnt = $this->db->prepare($sql);
-    $stmnt->execute();
-    $contacten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact');
-    return $contacten;
+        $sql = "SELECT * FROM `personen`";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->execute();
+        $members = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Persoon');
+        return $members;
     }
 
-    public function deleteContact()
+    public function deleteUser()
     {
-    $id= filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+        $id= filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
 
     if($id===null)
     {
@@ -41,41 +36,38 @@ class AdministratorModel extends AbstractModel {
         return REQUEST_FAILURE_DATA_INVALID;
     }
 
-    $sql = "SELECT * FROM `contacten` WHERE `contacten`.`id`=:id";
-    $stmnt = $this->db->prepare($sql);
-    $stmnt->bindParam(':id', $id);
-    $stmnt->execute();
-    $contacten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact');
-    if(count($contacten)===0)
+        $sql = "SELECT * FROM `personen` WHERE `personen`.`id`=:id";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':id', $id);
+        $stmnt->execute();
+        $users = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Persoon');
+
+    if(count($users)===0)
     {
         return REQUEST_FAILURE_DATA_INVALID;
     }
-    $fotoNaam = $contacten[0]->getFoto();
-    $sql = "DELETE FROM `contacten` WHERE `contacten`.`id`=:id";
-    $stmnt = $this->db->prepare($sql);
-    $stmnt->bindParam(':id', $id);
-    $stmnt->execute();
-    if($stmnt->rowCount()===1){
-        if($fotoNaam!=IMAGE_DEFAULT)
-        {
-            FOTO::verwijderAfbeelding($fotoNaam);
+        $sql = "DELETE FROM `personen` WHERE `personen`.`id`=:id";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':id', $id);
+        $stmnt->execute();
+        if($stmnt->rowCount()===1){
+
+            return REQUEST_SUCCESS;
         }
-        return REQUEST_SUCCESS;
-    }
-    return REQUEST_NOTHING_CHANGED;
+        return REQUEST_NOTHING_CHANGED;
     }
 
     public function addContact()
     {
-    $gebruikersnaam= filter_input(INPUT_POST, 'gn');
-    $wachtwoord= filter_input(INPUT_POST, 'ww');
-    $voorletter=filter_input(INPUT_POST, 'vl');
-    $tussenvoegsel=filter_input(INPUT_POST, 'tv');
-    $achternaam=filter_input(INPUT_POST, 'an');
-    $afdeling=filter_input(INPUT_POST,'afd',FILTER_VALIDATE_INT);
-    $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
-    $intern=filter_input(INPUT_POST,'int');
-    $extern=filter_input(INPUT_POST,'ext');
+        $gebruikersnaam= filter_input(INPUT_POST, 'gn');
+        $wachtwoord= filter_input(INPUT_POST, 'ww');
+        $voorletter=filter_input(INPUT_POST, 'vl');
+        $tussenvoegsel=filter_input(INPUT_POST, 'tv');
+        $achternaam=filter_input(INPUT_POST, 'an');
+        $afdeling=filter_input(INPUT_POST,'afd',FILTER_VALIDATE_INT);
+        $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+        $intern=filter_input(INPUT_POST,'int');
+        $extern=filter_input(INPUT_POST,'ext');
 
     if($gebruikersnaam===null || $voorletter===null || $achternaam===null || $afdeling===null ||$email===null)
     {

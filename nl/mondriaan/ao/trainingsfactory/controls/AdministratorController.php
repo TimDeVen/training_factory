@@ -26,6 +26,9 @@ class AdministratorController extends AbstractController
     {
         $gebruiker = $this->model->getGebruiker();
         $this->view->set('gebruiker',$gebruiker);
+
+        $users = $this->model->getUsers();
+        $this->view->set('users',$users);
     }
     
     protected function addAction()
@@ -36,7 +39,7 @@ class AdministratorController extends AbstractController
         }
         else
         {   
-            $result=$this->model->addContact();
+            $result=$this->model->addUser();
             switch($result)
             {
                 case IMAGE_FAILURE_SIZE_EXCEEDED:
@@ -61,15 +64,14 @@ class AdministratorController extends AbstractController
                     break;  
             }  
         }
-        $afdelingen = $this->model->getAfdelingen();
-        $this->view->set('afdelingen',$afdelingen);
+
         $gebruiker = $this->model->getGebruiker();
         $this->view->set('gebruiker',$gebruiker);
     }
     
     protected function deleteAction()
     {
-        $result = $this->model->deleteContact();
+        $result = $this->model->deleteUser();
         switch($result)
         {
             case REQUEST_FAILURE_DATA_INCOMPLETE:
