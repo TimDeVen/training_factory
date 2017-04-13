@@ -3,7 +3,7 @@ namespace framework\models;
 
 use framework\utils\Foto as FOTO;
 
-class SecretaresseModel extends AbstractModel {
+class AdministratorModel extends AbstractModel {
 
     public function __construct($control, $action)
     {

@@ -3,7 +3,7 @@ namespace framework\controllers;
 
 use framework\utils\Foto as FOTO;
     
-class SecretaresseController extends AbstractController
+class AdministratorController extends AbstractController
 {
     public function __construct($control, $action, $message = null)
     {

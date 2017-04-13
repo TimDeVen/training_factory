@@ -1,9 +1,11 @@
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/menu.php'; ?>
 
-
-
-<?= isset($boodschap) ? $boodschap : ''; ?>
+<?php if (isset($boodschap)) { ?>
+    <div class="alert alert-info">
+        <strong>Melding!</strong> <?php echo $boodschap; ?>
+    </div>
+<?php } ?>
 <div class="container">
   <h3>Lid Worden</h3>
   <p>
