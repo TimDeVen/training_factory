@@ -5,9 +5,9 @@
       <div class="container">
         <ul class="nav navbar-nav">
           <li><a href="?control=member&action=default">Home</a></li>
-          <li><a href="#">Inschrijven op les</a></li>
-          <li><a href="">Overzicht inschrijvingen</a></li>
-          <li><a href="">Gegevens lig wijzigen</a></li>
+          <li><a href="?control=member&action=inschrijven">Inschrijven op les</a></li>
+          <li><a href="?control=member&action=overzichtinschrijvingen">Overzicht inschrijvingen</a></li>
+          <li><a href="?control=member&action=gegevenswijzigen">Gegevens lid wijzigen</a></li>
         </ul>
      </div>
 
