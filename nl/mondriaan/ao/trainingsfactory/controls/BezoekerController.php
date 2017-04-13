@@ -94,6 +94,10 @@ class BezoekerController extends \ao\php\framework\controls\AbstractController
 
     protected function regelsAction()
     {
+
+    }
+    protected function trainingsaanbodAction()
+    {
       
     }
 }

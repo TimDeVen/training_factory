@@ -5,7 +5,7 @@
       <div class="container">
         <ul class="nav navbar-nav">
           <li><a href="?control=bezoeker&action=default">Home</a></li>
-          <li><a href="#">Trainings Aanbod</a></li>
+          <li><a href="?control=bezoeker&action=trainingsaanbod">Trainings Aanbod</a></li>
           <li><a href="?control=bezoeker&action=lidWorden">Lid worden</a></li>
           <li><a href="?control=bezoeker&action=regels">Gedrags regels</a></li>
           <li><a href="?control=bezoeker&action=contact">Locatie & Contact</a></li>
