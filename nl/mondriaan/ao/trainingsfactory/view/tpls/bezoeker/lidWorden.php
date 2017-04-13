@@ -3,7 +3,7 @@
 
 
 
-
+<?= isset($boodschap) ? $boodschap : ''; ?>
 <div class="container">
   <h3>Lid Worden</h3>
   <p>

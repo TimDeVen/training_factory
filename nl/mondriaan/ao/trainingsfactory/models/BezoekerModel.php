@@ -45,32 +45,33 @@ class BezoekerModel extends  \ao\php\framework\models\AbstractModel
         $gender=filter_input(INPUT_POST,'gender');
         $street=filter_input(INPUT_POST,'street');
         $postal=filter_input(INPUT_POST,'postal');
-        $email=filter_input(INPUT_POST,'email');
+        $place=filter_input(INPUT_POST,'place');
+        $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
         $dateofbirth=filter_input(INPUT_POST,'dateofbirth');
 
         var_dump($_POST);
 
-        if($firstname===null || $preprovision===null)
+        if($email===null)
         {
             return REQUEST_FAILURE_DATA_INCOMPLETE;
         }
 
-        if($gender===false)
+        if($loginname===false)
         {
             return REQUEST_FAILURE_DATA_INVALID;
         }
 
         if(empty($password))
         {
-            $sql=   "INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
-                password,gender,street,postal,email,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
-                :password,:gender,:street,:postal,:email,:dateofbirth,:email,'member') ";
+            $sql="INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
+                password,gender,street,postal_code,emailadress,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
+                'qwerty',:gender,:street,:postal,:email,:dateofbirth,'member') ";
             $stmnt = $this->dbh->prepare($sql);
         }
         else{
-            $sql=   "INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
-                password,gender,street,postal,email,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
-                :password,:gender,:street,:postal,:email,:dateofbirth,:email,'member') ";
+            $sql="INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
+                password,gender,street,postal_code,emailadress,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
+                :password,:gender,:street,:postal,:email,:dateofbirth,'member') ";
             $stmnt = $this->dbh->prepare($sql);
             $stmnt->bindParam(':password', $password);
         }
@@ -80,18 +81,19 @@ class BezoekerModel extends  \ao\php\framework\models\AbstractModel
         $stmnt->bindParam(':loginname', $loginname);
         $stmnt->bindParam(':gender', $gender);
         $stmnt->bindParam(':street', $street);
-        $stmnt->bindParam(':email', $email);
         $stmnt->bindParam(':postal', $postal);
         $stmnt->bindParam(':email', $email);
-        $stmnt->bindParam(':email', $email);
+        $stmnt->bindParam(':place', $place);
         $stmnt->bindParam(':dateofbirth', $dateofbirth);
 
         try
         {
+
             $stmnt->execute();
         }
         catch(\PDOEXception $e)
         {
+            var_dump($e);
             return REQUEST_FAILURE_DATA_INVALID;
         }
 
@@ -99,7 +101,7 @@ class BezoekerModel extends  \ao\php\framework\models\AbstractModel
         {
             return REQUEST_SUCCESS;
         }
-        return REQUEST_FAILURE_DATA_INVALID;
+        return REQUEST_FAILURE_DATA_INCOMPLETE;
     }
 
 }

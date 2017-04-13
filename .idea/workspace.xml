@@ -31,25 +31,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BezoekerController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BezoekerController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+            <state relative-caret-position="436">
+              <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BezoekerModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BezoekerModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
+            <state relative-caret-position="453">
+              <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding>
-                <marker date="1492003053685" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
-                <marker date="1492003053685" expanded="true" signature="2001:2280" ph="INSERT INTO `gebruikers`... " />
-                <marker date="1492003053685" expanded="true" signature="2377:2656" ph="INSERT INTO `gebruikers`... " />
+                <marker date="1492071909789" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
+                <marker date="1492071909789" expanded="true" signature="2044:2326" ph="INSERT INTO `gebruikers`... " />
+                <marker date="1492071909789" expanded="true" signature="2420:2703" ph="INSERT INTO `gebruikers`... " />
               </folding>
             </state>
           </provider>
@@ -58,8 +58,8 @@
       <file leaf-file-name="lidWorden.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-476">
-              <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="640">
+              <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -141,9 +141,9 @@
         <option value="$PROJECT_DIR$/css/bezoeker.css" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/menu.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/default.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php" />
       </list>
     </option>
   </component>
@@ -676,12 +676,13 @@
       <workItem from="1491150571313" duration="10000" />
       <workItem from="1491467068680" duration="12503000" />
       <workItem from="1491557440790" duration="3672000" />
-      <workItem from="1491994458548" duration="6177000" />
+      <workItem from="1491994458548" duration="6689000" />
+      <workItem from="1492068955321" duration="3220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32437000" />
+    <option name="totallyTimeSpent" value="36169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -844,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,35 +970,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state relative-caret-position="640">
+          <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
+        <state relative-caret-position="453">
+          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
           <folding>
-            <marker date="1492003053685" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
-            <marker date="1492003053685" expanded="true" signature="2001:2280" ph="INSERT INTO `gebruikers`... " />
-            <marker date="1492003053685" expanded="true" signature="2377:2656" ph="INSERT INTO `gebruikers`... " />
+            <marker date="1492071909789" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
+            <marker date="1492071909789" expanded="true" signature="2044:2326" ph="INSERT INTO `gebruikers`... " />
+            <marker date="1492071909789" expanded="true" signature="2420:2703" ph="INSERT INTO `gebruikers`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
