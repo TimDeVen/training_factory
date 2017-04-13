@@ -19,4 +19,19 @@ class Les extends \ao\php\framework\models\db\Entiteit
     public function getName() {
         return "$this->firstname $this->preprovision $this->lastname";
     }
+    public function getTime() {
+        return $this->time;
+    }
+    public function getDate() {
+        return $this->date;
+    }
+    public function getLocation() {
+        return $this->location;
+    }
+    public function getMaxPersons() {
+        return $this->max_persons;
+    }
+    public function getId() {
+        return $this->id;
+    }
 }
