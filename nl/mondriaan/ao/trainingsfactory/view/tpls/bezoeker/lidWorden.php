@@ -1,12 +1,13 @@
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/menu.php'; ?>
 
-<?php if (isset($boodschap)) { ?>
-    <div class="alert alert-info">
-        <strong>Melding!</strong> <?php echo $boodschap; ?>
-    </div>
-<?php } ?>
+
 <div class="container">
+    <?php if (isset($boodschap)) { ?>
+        <div class="alert alert-info">
+            <strong>Melding!</strong> <?php echo $boodschap; ?>
+        </div>
+    <?php } ?>
   <h3>Lid Worden</h3>
   <p>
       Om gebruik te kunnen maken van de lessen moet je bij ons bekend zijn.<br/>

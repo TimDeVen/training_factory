@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35243a2a-9fc2-44be-a5c0-308b7dd9f550" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/SecretaresseController.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/SecretaresseModel.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/add.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/add.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/anw.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/anw.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/beheer.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/default.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/default.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/foto.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/foto.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/includes/footer.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/footer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/includes/header.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/header.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/includes/menu.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/secretaresse/ww.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/ww.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/localhost.sql" afterPath="$PROJECT_DIR$/localhost.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,8 +58,8 @@
       <file leaf-file-name="lidWorden.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -740,12 +727,12 @@
       <workItem from="1491467068680" duration="12503000" />
       <workItem from="1491557440790" duration="3672000" />
       <workItem from="1491994458548" duration="6689000" />
-      <workItem from="1492068955321" duration="5433000" />
+      <workItem from="1492068955321" duration="5540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38382000" />
+    <option name="totallyTimeSpent" value="38489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1091,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
