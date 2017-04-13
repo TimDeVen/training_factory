@@ -1,7 +1,7 @@
 <?php
-namespace framework\controllers;
+namespace nl\mondriaan\ao\trainingsfactory\controls;
 
-use framework\utils\Foto as FOTO;
+use ao\php\framework\controls\AbstractController;
     
 class AdministratorController extends AbstractController
 {
@@ -18,20 +18,14 @@ class AdministratorController extends AbstractController
   
     protected function defaultAction()
     {
-       $gebruiker = $this->model->getGebruiker();
+        $gebruiker = $this->model->getGebruiker();
         $this->view->set('gebruiker',$gebruiker);
-        $contacten = $this->model->getContacten();
-        $this->view->set('contacten', $contacten);
     }
     
     protected function beheerAction()
     {
         $gebruiker = $this->model->getGebruiker();
         $this->view->set('gebruiker',$gebruiker);
-        $contacten = $this->model->getContacten();
-        $this->view->set('contacten', $contacten);
-        $afdelingen = $this->model->getAfdelingen();
-        $this->view->set('afdelingen', $afdelingen);
     }
     
     protected function addAction()

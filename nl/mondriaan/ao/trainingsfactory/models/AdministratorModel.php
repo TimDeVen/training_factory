@@ -1,7 +1,7 @@
 <?php
-namespace framework\models;
+namespace nl\mondriaan\ao\trainingsfactory\models;
 
-use framework\utils\Foto as FOTO;
+use ao\php\framework\models\AbstractModel;
 
 class AdministratorModel extends AbstractModel {
 

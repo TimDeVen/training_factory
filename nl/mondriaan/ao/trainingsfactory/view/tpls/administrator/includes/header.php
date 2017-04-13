@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Telefoonlijst</title>
-        <link rel="STYLESHEET" href="css/telefoonlijst.css" type="text/css">
-        <link rel="STYLESHEET" href="css/secretaresse.css" type="text/css">
-    </head>
-    <body>
-        <header>
-            <figure>
-                <img src="img/mondriaan.jpg" alt="ons schoolgebouw aan de tinwerf 10 denhaag">
-            </figure>
-            <div>
-                <p>Dit is de beheers applicatie voor de school voor ICT.</p>
-                <p>Momenteel is ingelogd: <em><?=$gebruiker->getNaam();?></em></p> 
-                <p>Je hebt de rechten van: <em><?=$gebruiker->getRecht();?></em></p>
-                <?=isset($msg)?"<p id = 'msg'><em>$msg</em></p>":""?>
-            </div>
-            <figure>
-                <a href="?control=secretaresse&action=foto" title='klik om je foto te wijzigen'> <img src="img/personen/<?=$gebruiker->getFoto()?>"></a>
-            </figure>
-        </header>
-        <section>
-    
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bezoeker.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <title>Training Factory</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-6 col-md-4">
+            <img src="img/fight.png" alt="Training Centrum Den Haag" width="250px" height="200px"/>
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+            <center><div id="titelh">Training Centrum<br/>Den Haag</div></center>
+        </div>
+
+        <div class="col-xs-6 col-md-4 placing">
+            <?php echo $gebruiker->getName(); ?><br/>
+            -<?php echo $gebruiker->getRole(); ?>-<br/>
+            <a href="?control=member&action=uitloggen"><input class="btn btn-lg btn-secondary btn-block" type="submit" value="Uitloggen"></a>
+        </div>
+
+    </div>

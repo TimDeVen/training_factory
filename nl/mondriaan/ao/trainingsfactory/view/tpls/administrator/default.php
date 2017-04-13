@@ -1,40 +1,24 @@
-<?php 
-include 'includes/header.php';
-include 'includes/menu.php';?>
-        <section id='content'>
-            <table id="contacten">
-                <thead>
-                    <caption>
-                        dit zijn alle werknemers van de school voor ict
-                    </caption>
-                    <tr>
-                        <td>foto</td>
-                        <td>naam</td>
-                        <td>email</td>
-                        <td>intern</td>
-                        <td>extern</td>
-                        <td>afd</td>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach($contacten as $contact):?>
-                    <tr>
-                        <td>
-                            <figure>
-                                <img src="img/personen/<?= $contact->getFoto();?>" alt="de foto van <?= $contact->getNaam();?>">
-                            </figure>
-                        </td>
-                        <td><?= $contact->getNaam();?></td>
-                        <td>
-                            <a href="mailto: <?= $contact->getEmail();?>"><?= $contact->getEmail();?></a>
-                        </td>
-                        <td><?= $contact->getIntern();?></td>
-                        <td><?= $contact->getExtern();?></td>
-                        <td title ="<?= $contact->getAfdelings_naam();?>"> <?=$contact->getAfdelings_afkorting()?></td>
-                    </tr>
-                <?php endforeach;?>
-                </tbody>
-            </table>
-            <br id ="breaker">
-        </section>
-<?php include 'includes/footer.php';
+<?php include 'includes/header.php'; ?>
+<?php include 'includes/menu.php'; ?>
+
+
+
+
+<div class="container" style="text-align: justify;">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>U bent ingelogd als <?php echo $gebruiker->getRole(); ?></h3>
+            <p>De administrateur, of een van zijn/haar medewerkers, verwerkt alle binnengekomen financiële documenten in de boekhouding van het bedrijf.
+                Tegenwoordig gebeurt dit bijna altijd door middel van een geautomatiseerde boekhouding.
+                Hiervoor zijn diverse gespecialiseerde softwarepakketten die gebruikt kunnen worden.
+                Alle uitgaande en binnengekomen facturen worden ingeboekt in de debiteuren- en crediteurenadministratie.
+                De bankafschriften worden verwerkt in de kas-, bank- en giroboeken.</p>
+        </div>
+    </div>
+</div>
+<div class="hidden-thing"></div>
+
+<div style="clear:both;"></div>
+
+</body>
+<?php include 'includes/footer.php'; ?>
