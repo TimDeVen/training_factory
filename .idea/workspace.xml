@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35243a2a-9fc2-44be-a5c0-308b7dd9f550" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +34,10 @@
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1201">
-              <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-              <folding />
+              <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+              <folding>
+                <marker date="1492077887427" expanded="true" signature="3208:3287" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+              <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -685,12 +688,12 @@
       <workItem from="1491467068680" duration="12503000" />
       <workItem from="1491557440790" duration="3672000" />
       <workItem from="1491994458548" duration="6689000" />
-      <workItem from="1492068955321" duration="4508000" />
+      <workItem from="1492068955321" duration="5161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37457000" />
+    <option name="totallyTimeSpent" value="38110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1000,15 +1003,17 @@
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1201">
-          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding />
+          <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding>
+            <marker date="1492077887427" expanded="true" signature="3208:3287" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding />
         </state>
       </provider>

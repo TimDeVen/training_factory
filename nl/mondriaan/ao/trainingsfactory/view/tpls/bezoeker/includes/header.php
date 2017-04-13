@@ -19,7 +19,7 @@
         </div>
 
         <div class="col-xs-6 col-md-4 placing">
-            <form action="?control=bezoeker&action=inloggen" method="POST">
+            <form action="?control=bezoeker&action=default" method="POST">
               <input type="text" class="form-control" name="gn" placeholder="login name" required="" autofocus="" />
               <input type="password" class="form-control" name="ww" placeholder="Password" required=""/>
 
