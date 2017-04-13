@@ -64,14 +64,14 @@ class BezoekerModel extends  \ao\php\framework\models\AbstractModel
         if(empty($password))
         {
             $sql="INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
-                password,gender,street,postal_code,emailadress,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
-                'qwerty',:gender,:street,:postal,:email,:dateofbirth,'member') ";
+                password,gender,street,postal_code,emailadress,place,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
+                'qwerty',:gender,:street,:postal,:email,:place,:dateofbirth,'member') ";
             $stmnt = $this->dbh->prepare($sql);
         }
         else{
             $sql="INSERT INTO `personen` (firstname,preprovision,lastname,loginname, 
-                password,gender,street,postal_code,emailadress,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
-                :password,:gender,:street,:postal,:email,:dateofbirth,'member') ";
+                password,gender,street,postal_code,emailadress,place,dateofbirth,role)VALUES (:firstname,:preprovision,:lastname,:loginname, 
+                :password,:gender,:street,:postal,:email,:place,:dateofbirth,'member') ";
             $stmnt = $this->dbh->prepare($sql);
             $stmnt->bindParam(':password', $password);
         }

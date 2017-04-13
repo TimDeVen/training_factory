@@ -4,7 +4,6 @@
     <list default="true" id="35243a2a-9fc2-44be-a5c0-308b7dd9f550" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BezoekerController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BezoekerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+            <state relative-caret-position="385">
+              <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -44,12 +43,12 @@
       <file leaf-file-name="BezoekerModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+            <state relative-caret-position="419">
+              <caret line="73" column="63" lean-forward="false" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
               <folding>
-                <marker date="1492071909789" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
-                <marker date="1492071909789" expanded="true" signature="2044:2326" ph="INSERT INTO `gebruikers`... " />
-                <marker date="1492071909789" expanded="true" signature="2420:2703" ph="INSERT INTO `gebruikers`... " />
+                <marker date="1492075979496" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
+                <marker date="1492075979496" expanded="true" signature="2044:2339" ph="INSERT INTO `gebruikers`... " />
+                <marker date="1492075979496" expanded="true" signature="2433:2729" ph="INSERT INTO `gebruikers`... " />
               </folding>
             </state>
           </provider>
@@ -58,8 +57,18 @@
       <file leaf-file-name="lidWorden.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
+            <state relative-caret-position="238">
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -119,7 +128,6 @@
         <option value="$PROJECT_DIR$/framework/models/MedewerkerModel.php" />
         <option value="$PROJECT_DIR$/framework/controllers/BezoekerController.php" />
         <option value="$PROJECT_DIR$/framework/controllers/SecretaresseController.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php" />
         <option value="$PROJECT_DIR$/../../alias/phpmyadmin.conf" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Afdeling.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" />
@@ -141,9 +149,10 @@
         <option value="$PROJECT_DIR$/css/bezoeker.css" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/menu.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/default.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php" />
       </list>
     </option>
   </component>
@@ -677,12 +686,12 @@
       <workItem from="1491467068680" duration="12503000" />
       <workItem from="1491557440790" duration="3672000" />
       <workItem from="1491994458548" duration="6689000" />
-      <workItem from="1492068955321" duration="3220000" />
+      <workItem from="1492068955321" duration="4422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36169000" />
+    <option name="totallyTimeSpent" value="37371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -811,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ao/php/framework/controls/ControlDispatcher.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -845,6 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,6 +931,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -970,33 +974,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
+        <state relative-caret-position="385">
+          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        <state relative-caret-position="419">
+          <caret line="73" column="63" lean-forward="false" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
           <folding>
-            <marker date="1492071909789" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
-            <marker date="1492071909789" expanded="true" signature="2044:2326" ph="INSERT INTO `gebruikers`... " />
-            <marker date="1492071909789" expanded="true" signature="2420:2703" ph="INSERT INTO `gebruikers`... " />
+            <marker date="1492075979496" expanded="true" signature="455:524" ph="SELECT * FRO... personen" />
+            <marker date="1492075979496" expanded="true" signature="2044:2339" ph="INSERT INTO `gebruikers`... " />
+            <marker date="1492075979496" expanded="true" signature="2433:2729" ph="INSERT INTO `gebruikers`... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/lidWorden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+        <state relative-caret-position="238">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/bezoeker/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding />
         </state>
       </provider>
