@@ -32,6 +32,8 @@ class MemberController extends AbstractController
     {
       $gebruiker = $this->model->getGebruiker();
       $this->view->set("gebruiker",$gebruiker);
+      
+      
     }
 
     protected function gegevenswijzigenAction()
