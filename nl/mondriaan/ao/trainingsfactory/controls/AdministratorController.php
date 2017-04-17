@@ -24,6 +24,9 @@ class AdministratorController extends AbstractController
     
     protected function beheerAction()
     {
+        $lessen = $this->model->getIngeschrevenLessen();
+        $this->view->set('lessen',$lessen);
+
         $gebruiker = $this->model->getGebruiker();
         $this->view->set('gebruiker',$gebruiker);
 
@@ -129,32 +132,15 @@ class AdministratorController extends AbstractController
     }
     
     protected function anwAction()
-    {   
-        if($this->model->isPostLeeg())
-        {
-           $this->view->set("msg","Wijzig hier je  gegevens");
-        }
-        else
-        {
-            $result = $this->model->wijzigAnw();
-            switch($result)
-            {
-                case REQUEST_SUCCESS:
-                    $this->view->set('msg','wijziging gelukt');
-                    break;
-                case REQUEST_FAILURE_DATA_INCOMPLETE:
-                    $this->view->set("msg","De gegevens waren incompleet. Vul compleet in!");
-                    break;
-                case REQUEST_NOTHING_CHANGED:
-                    $this->view->set("msg","Er was niets te wijzigen");
-                    break;
-                case REQUEST_FAILURE_DATA_INVALID:
-                    $this->view->set("msg","gebruikersnaam is al in gebruik, kies een andere waarde.");
-                    break;
-            }   
-        }
+    {
         $gebruiker = $this->model->getGebruiker();
         $this->view->set('gebruiker',$gebruiker);
+
+        $lid = $this->model->getLid();
+        $this->view->set('lid',$lid);
+
+        $lessen = $this->model->getIngeschrevenLessen();
+        $this->view->set('lessen',$lessen);
     }
     
     protected function wwAction()

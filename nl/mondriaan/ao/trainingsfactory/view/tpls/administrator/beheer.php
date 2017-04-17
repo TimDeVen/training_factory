@@ -32,8 +32,8 @@
                 <td> <?php echo $user->getPlace(); ?></td>
                 <td> <?php echo $user->getEmailadress(); ?></td>
                 <td> <?php echo $user->getRole(); ?></td>
-                <td><a href="?control=administrator&action=delete&id=<?php echo $user->getId(); ?>" >Verwijder</a></td>
-                <td><a href="?control=administrator&action=wijzig&id=<?php echo $user->getId(); ?>" >Wijzig</a></td>
+                <td><a href="?control=administrator&action=anw&id=<?php echo $user->getId(); ?>" >View</a></td>
+                <td><a href="?control=administrator&action=delete&id=<?php echo $user->getId(); ?>" >Delete</a></td>
             </tr>
         <?php }
         ?>
@@ -45,3 +45,4 @@
 <div style="clear:both;"></div>
 
 </body>
+<?php include 'includes/footer.php'; ?>
