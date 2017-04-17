@@ -171,4 +171,14 @@ class AdministratorController extends AbstractController
             } 
         }
     }
+
+    protected function beheerInstructeursAction()
+    {
+
+        $gebruiker = $this->model->getGebruiker();
+        $this->view->set('gebruiker',$gebruiker);
+
+        $instructeurs = $this->model->getInstructeurs();
+        $this->view->set('instructeurs',$instructeurs);
+    }
 }

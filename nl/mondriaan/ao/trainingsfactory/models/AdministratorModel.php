@@ -23,6 +23,15 @@ class AdministratorModel extends AbstractModel {
         return $members;
     }
 
+    public function getInstructeurs()
+    {
+        $sql = "SELECT * FROM `personen` WHERE role = 'instructeur'";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->execute();
+        $members = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Persoon');
+        return $members;
+    }
+
     public function deleteUser()
     {
         $id= filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);

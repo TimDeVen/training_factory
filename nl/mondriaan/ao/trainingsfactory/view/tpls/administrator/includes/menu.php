@@ -6,7 +6,7 @@
         <ul class="nav navbar-nav">
           <li><a href="?control=administrator&action=default">Home</a></li>
           <li><a href="?control=administrator&action=beheer">Members beheren</a></li>
-          <li><a href="?control=administrator&action=toevoegen">Les toevoegen</a></li>
+          <li><a href="?control=administrator&action=beheerInstructeurs">Instructeurs beheren</a></li>
           <li><a href="?control=administrator&action=gegevens">Gegevens wijzigen</a></li>
         </ul>
      </div>
