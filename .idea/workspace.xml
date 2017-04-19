@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35243a2a-9fc2-44be-a5c0-308b7dd9f550" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/gegevenswijzigen.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/InstructeurController.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/InstructeurController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/MemberController.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/MemberController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/InstructeurModel.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/InstructeurModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/MemberModel.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/MemberModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/includes/header.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/includes/menu.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/includes/menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/member/gegevenswijzigen.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/member/gegevenswijzigen.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +37,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdministratorController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdministratorController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="884">
@@ -55,35 +57,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdministratorModel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdministratorModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="466" column="0" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
+            <state relative-caret-position="2465">
+              <caret line="145" column="57" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
               <folding>
-                <marker date="1492635952637" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
-                <marker date="1492635952637" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
-                <marker date="1492635952637" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
-                <marker date="1492635952637" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
-                <marker date="1492635952637" expanded="true" signature="1682:1730" ph="DELETE FROM " />
-                <marker date="1492635952637" expanded="true" signature="2290:2344" ph="SELECT * FRO... trainingen" />
-                <marker date="1492635952637" expanded="true" signature="2666:2718" ph="DELETE FROM " />
-                <marker date="1492635952637" expanded="true" signature="6514:6766" ph="UPDATE `cont... " />
-                <marker date="1492635952637" expanded="true" signature="8173:8282" ph="UPDATE `pers... " />
-                <marker date="1492635952637" expanded="true" signature="8173:8309" ph="UPDATE `pers... " />
-                <marker date="1492635952637" expanded="true" signature="8173:8311" ph="UPDATE `trai... " />
-                <marker date="1492635952637" expanded="true" signature="9029:9089" ph="SELECT * FRO... contacten" />
-                <marker date="1492635952637" expanded="true" signature="9513:9552" ph="SELECT * FRO... personen" />
-                <marker date="1492635952637" expanded="true" signature="10519:10601" ph="UPDATE `cont... " />
-                <marker date="1492635952637" expanded="true" signature="11001:11743" ph="SELECT DATE_... lessons" />
-                <marker date="1492635952637" expanded="true" signature="11585:11697" ph="SELECT lesso... registrations" />
-                <marker date="1492635952637" expanded="true" signature="12979:13279" ph="INSERT INTO `personen`... " />
-                <marker date="1492635952637" expanded="true" signature="13373:13674" ph="INSERT INTO `personen`... " />
-                <marker date="1492635952637" expanded="true" signature="15081:15184" ph="INSERT INTO `trainingen`... " />
-                <marker date="1492635952637" expanded="true" signature="15798:15824" ph="SELECT * FRO... trainingen" />
-                <marker date="1492635952637" expanded="true" signature="16176:16209" ph="SELECT * FRO... trainingen" />
-                <marker date="1492635952637" expanded="true" signature="16176:16228" ph="SELECT * FRO... trainingen" />
-                <marker date="1492635952637" expanded="true" signature="16176:16230" ph="SELECT * FRO... trainingen" />
+                <marker date="1492636567293" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
+                <marker date="1492636567293" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
+                <marker date="1492636567293" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
+                <marker date="1492636567293" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
+                <marker date="1492636567293" expanded="true" signature="1682:1730" ph="DELETE FROM " />
+                <marker date="1492636567293" expanded="true" signature="2290:2344" ph="SELECT * FRO... trainingen" />
+                <marker date="1492636567293" expanded="true" signature="2666:2718" ph="DELETE FROM " />
+                <marker date="1492636567293" expanded="true" signature="6514:6766" ph="UPDATE `cont... " />
+                <marker date="1492636567293" expanded="true" signature="8173:8311" ph="UPDATE `trai... " />
+                <marker date="1492636567293" expanded="true" signature="9029:9089" ph="SELECT * FRO... personen" />
+                <marker date="1492636567293" expanded="true" signature="9513:9552" ph="SELECT * FRO... personen" />
+                <marker date="1492636567293" expanded="true" signature="10519:10601" ph="UPDATE `cont... " />
+                <marker date="1492636567293" expanded="true" signature="11001:11743" ph="SELECT DATE_... lessons" />
+                <marker date="1492636567293" expanded="true" signature="11585:11697" ph="SELECT lesso... registrations" />
+                <marker date="1492636567293" expanded="true" signature="12979:13279" ph="INSERT INTO `personen`... " />
+                <marker date="1492636567293" expanded="true" signature="13373:13674" ph="INSERT INTO `personen`... " />
+                <marker date="1492636567293" expanded="true" signature="15081:15184" ph="INSERT INTO `trainingen`... " />
+                <marker date="1492636567293" expanded="true" signature="15798:15824" ph="SELECT * FRO... trainingen" />
+                <marker date="1492636567293" expanded="true" signature="16176:16230" ph="SELECT * FRO... trainingen" />
               </folding>
             </state>
           </provider>
@@ -207,9 +205,9 @@
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/anwTrainingsvorm.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerTrainingsvormen.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/addTrainingsvorm.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
       </list>
     </option>
   </component>
@@ -650,12 +648,12 @@
       <workItem from="1492085713434" duration="3185000" />
       <workItem from="1492433143693" duration="7269000" />
       <workItem from="1492614943361" duration="42000" />
-      <workItem from="1492614996272" duration="17857000" />
+      <workItem from="1492614996272" duration="18422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69154000" />
+    <option name="totallyTimeSpent" value="69719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -666,18 +664,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1092,38 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="466" column="0" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
-          <folding>
-            <marker date="1492635952637" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
-            <marker date="1492635952637" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
-            <marker date="1492635952637" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
-            <marker date="1492635952637" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
-            <marker date="1492635952637" expanded="true" signature="1682:1730" ph="DELETE FROM " />
-            <marker date="1492635952637" expanded="true" signature="2290:2344" ph="SELECT * FRO... trainingen" />
-            <marker date="1492635952637" expanded="true" signature="2666:2718" ph="DELETE FROM " />
-            <marker date="1492635952637" expanded="true" signature="6514:6766" ph="UPDATE `cont... " />
-            <marker date="1492635952637" expanded="true" signature="8173:8282" ph="UPDATE `pers... " />
-            <marker date="1492635952637" expanded="true" signature="8173:8309" ph="UPDATE `pers... " />
-            <marker date="1492635952637" expanded="true" signature="8173:8311" ph="UPDATE `trai... " />
-            <marker date="1492635952637" expanded="true" signature="9029:9089" ph="SELECT * FRO... contacten" />
-            <marker date="1492635952637" expanded="true" signature="9513:9552" ph="SELECT * FRO... personen" />
-            <marker date="1492635952637" expanded="true" signature="10519:10601" ph="UPDATE `cont... " />
-            <marker date="1492635952637" expanded="true" signature="11001:11743" ph="SELECT DATE_... lessons" />
-            <marker date="1492635952637" expanded="true" signature="11585:11697" ph="SELECT lesso... registrations" />
-            <marker date="1492635952637" expanded="true" signature="12979:13279" ph="INSERT INTO `personen`... " />
-            <marker date="1492635952637" expanded="true" signature="13373:13674" ph="INSERT INTO `personen`... " />
-            <marker date="1492635952637" expanded="true" signature="15081:15184" ph="INSERT INTO `trainingen`... " />
-            <marker date="1492635952637" expanded="true" signature="15798:15824" ph="SELECT * FRO... trainingen" />
-            <marker date="1492635952637" expanded="true" signature="16176:16209" ph="SELECT * FRO... trainingen" />
-            <marker date="1492635952637" expanded="true" signature="16176:16228" ph="SELECT * FRO... trainingen" />
-            <marker date="1492635952637" expanded="true" signature="16176:16230" ph="SELECT * FRO... trainingen" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/addTrainingsvorm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -1137,6 +1103,34 @@
         <state relative-caret-position="884">
           <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="145" column="57" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
+          <folding>
+            <marker date="1492636567293" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
+            <marker date="1492636567293" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
+            <marker date="1492636567293" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
+            <marker date="1492636567293" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
+            <marker date="1492636567293" expanded="true" signature="1682:1730" ph="DELETE FROM " />
+            <marker date="1492636567293" expanded="true" signature="2290:2344" ph="SELECT * FRO... trainingen" />
+            <marker date="1492636567293" expanded="true" signature="2666:2718" ph="DELETE FROM " />
+            <marker date="1492636567293" expanded="true" signature="6514:6766" ph="UPDATE `cont... " />
+            <marker date="1492636567293" expanded="true" signature="8173:8311" ph="UPDATE `trai... " />
+            <marker date="1492636567293" expanded="true" signature="9029:9089" ph="SELECT * FRO... personen" />
+            <marker date="1492636567293" expanded="true" signature="9513:9552" ph="SELECT * FRO... personen" />
+            <marker date="1492636567293" expanded="true" signature="10519:10601" ph="UPDATE `cont... " />
+            <marker date="1492636567293" expanded="true" signature="11001:11743" ph="SELECT DATE_... lessons" />
+            <marker date="1492636567293" expanded="true" signature="11585:11697" ph="SELECT lesso... registrations" />
+            <marker date="1492636567293" expanded="true" signature="12979:13279" ph="INSERT INTO `personen`... " />
+            <marker date="1492636567293" expanded="true" signature="13373:13674" ph="INSERT INTO `personen`... " />
+            <marker date="1492636567293" expanded="true" signature="15081:15184" ph="INSERT INTO `trainingen`... " />
+            <marker date="1492636567293" expanded="true" signature="15798:15824" ph="SELECT * FRO... trainingen" />
+            <marker date="1492636567293" expanded="true" signature="16176:16230" ph="SELECT * FRO... trainingen" />
+          </folding>
         </state>
       </provider>
     </entry>
