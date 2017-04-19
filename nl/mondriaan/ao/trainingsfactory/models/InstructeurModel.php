@@ -29,15 +29,15 @@ class InstructeurModel extends AbstractModel
     $_SESSION = array();
     session_destroy();
     }
-    
+
     public function getLessen() {
         $sql = "SELECT * FROM `lessons`";
         $stmnt = $this->dbh->prepare($sql);
         $stmnt->execute();
-        $lessen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');    
-        return $lessen;      
+        $lessen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');
+        return $lessen;
     }
-    
+
     public function verwijderLes() {
         $les_id  = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
         $sql = "DELETE FROM `lessons` WHERE `id` = :id";
@@ -51,14 +51,14 @@ class InstructeurModel extends AbstractModel
         }
         return REQUEST_NOTHING_CHANGED;
     }
-    
+
     public function wijzigLes() {
         $tijd = filter_input(INPUT_POST,'tijd');
         $datum = filter_input(INPUT_POST,'datum');
         $locatie = filter_input(INPUT_POST,'locatie');
         $maxpers = filter_input(INPUT_POST,'maxpers');
         $les_id  = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
-        
+
 
         if($datum===null || $tijd===null || $locatie===null || $maxpers===null) {
             return REQUEST_FAILURE_DATA_INCOMPLETE;
@@ -66,7 +66,7 @@ class InstructeurModel extends AbstractModel
         if(empty($datum)||empty($tijd)||empty($locatie)||empty($maxpers)) {
             return REQUEST_FAILURE_DATA_INCOMPLETE;
         }
-        
+
         $sql = "UPDATE `lessons` SET time=:tijd,date=:datum,location=:locatie,max_persons=:maxpers  WHERE id = $les_id";
         $stmnt = $this->dbh->prepare($sql);
         $stmnt->bindParam(':tijd', $tijd);
@@ -93,7 +93,7 @@ class InstructeurModel extends AbstractModel
         if(empty($datum)||empty($tijd)||empty($locatie)||empty($maxpers)) {
             return REQUEST_FAILURE_DATA_INCOMPLETE;
         }
-        
+
         $id = $this->getGebruiker()->getId();
         $sql = "INSERT INTO `lessons` (time,date,location,max_persons) VALUES (:tijd,:datum,:locatie,:maxpers)";
         $stmnt = $this->dbh->prepare($sql);
@@ -115,7 +115,95 @@ class InstructeurModel extends AbstractModel
         $stmnt = $this->dbh->prepare($sql);
         $stmnt->bindParam(':id',$les_id);
         $stmnt->execute();
-        $les = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');    
-        return $les[0];  
+        $les = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');
+        return $les[0];
     }
+
+    public function wijziggegevens()
+    {
+        $firstname = filter_input(INPUT_POST, 'firstname');
+        $preprovision = filter_input(INPUT_POST, 'preprovision');
+        $lastname = filter_input(INPUT_POST, 'lastname');
+        $dateofbirth = filter_input(INPUT_POST, 'dateofbirth');
+        $loginname = filter_input(INPUT_POST, 'loginname');
+        $email = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password');
+        $gender = filter_input(INPUT_POST, 'gender');
+        $street = filter_input(INPUT_POST, 'street');
+        $postal = filter_input(INPUT_POST, 'postal');
+        $place = filter_input(INPUT_POST, 'place');
+        $id = $this->getGebruiker()->getId();
+
+        if(empty($password)) {
+            $sql = "UPDATE `personen`
+                    SET firstname = :firstname,
+                        preprovision = :preprovision,
+                        lastname = :lastname,
+                        dateofbirth = :dateofbirth,
+                        loginname = :loginname,
+                        emailadress = :email,
+                        gender = :gender,
+                        street = :street,
+                        postal_code = :postal,
+                        place = :place,
+                        password = 'qwerty
+                          where id = :id";
+            $stmnt = $this->dbh->prepare($sql);
+
+        } else {
+
+            $sql = "UPDATE `personen`
+                    SET firstname = :firstname,
+                    preprovision = :preprovision,
+                    lastname = :lastname,
+                    dateofbirth = :dateofbirth,
+                    loginname = :loginname,
+                    emailadress = :email,
+                    gender = :gender,
+                    street = :street,
+                    postal_code = :postal,
+                    place = :place,
+                    password = :password
+                    where id = :id";
+            $stmnt = $this->dbh->prepare($sql);
+            $stmnt->bindParam(':password', $password);
+        }
+
+        $stmnt->bindParam(':firstname', $firstname);
+        $stmnt->bindParam(':preprovision', $preprovision);
+        $stmnt->bindParam(':lastname', $lastname);
+        $stmnt->bindParam(':dateofbirth', $dateofbirth);
+        $stmnt->bindParam(':loginname', $loginname);
+        $stmnt->bindParam(':email', $email);
+        $stmnt->bindParam(':gender', $gender);
+        $stmnt->bindParam(':street', $street);
+        $stmnt->bindParam(':postal', $postal);
+        $stmnt->bindParam(':place', $place);
+        $stmnt->bindParam(':id', $id);
+
+        try {
+            $stmnt->execute();
+        } catch(\PDOEXception $e) {
+            var_dump($e);
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $aantalGewijzigd = $stmnt->rowCount();
+         if($aantalGewijzigd===1)
+         {
+             $this->updateGebruiker();
+             return REQUEST_SUCCESS;
+         }
+
+        return REQUEST_NOTHING_CHANGED;
+  }
+   public function updateGebruiker() {
+      $gebruiker_id = $this->getGebruiker()->getId();
+      $sql = "SELECT * FROM `personen` WHERE `personen`.`id` = :gebruiker_id";
+      $stmnt = $this->dbh->prepare($sql);
+      $stmnt->bindParam(':gebruiker_id', $gebruiker_id);
+      $stmnt->setFetchMode(\PDO::FETCH_CLASS, __NAMESPACE__ . '\db\Persoon');
+      $stmnt->execute();
+      $_SESSION['gebruiker'] = $stmnt->fetch(\PDO::FETCH_CLASS);
+  }
 }
