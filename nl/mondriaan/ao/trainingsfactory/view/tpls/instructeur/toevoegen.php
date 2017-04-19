@@ -2,8 +2,8 @@
 <?php include 'includes/menu.php'; ?>
 
   <?php if (isset($boodschap)) { ?>
-  <div class="alert alert-info"> 
-    <strong>Melding!</strong> <?php echo $boodschap; ?>    
+  <div class="alert alert-info">
+    <strong>Melding!</strong> <?php echo $boodschap; ?>
   </div>
   <?php } ?>
 <div class="container" style="text-align: justify;">
@@ -42,4 +42,4 @@
 <div style="clear:both;"></div>
 
 </body>
-<?php// include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

@@ -7,8 +7,8 @@
 <div class="container" style="text-align: justify;">
   <h2>Lessenbeheer</h2>
   <?php if (isset($boodschap)) { ?>
-  <div class="alert alert-info"> 
-    <strong>Melding!</strong> <?php echo $boodschap; ?>    
+  <div class="alert alert-info">
+    <strong>Melding!</strong> <?php echo $boodschap; ?>
   </div>
   <?php } ?>
   <table class="table">
@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-        <?php 
+        <?php
         foreach ($lessen as $les) {?>
             <tr>
                 <td> <?php echo $les->getDate(); ?></td>
@@ -43,3 +43,4 @@
 <div style="clear:both;"></div>
 
 </body>
+<?php include 'includes/footer.php'; ?>
