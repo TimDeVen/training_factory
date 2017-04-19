@@ -1,4 +1,4 @@
-  <?php
+<?php
 namespace nl\mondriaan\ao\trainingsfactory\models;
 
 use ao\php\framework\models\AbstractModel;

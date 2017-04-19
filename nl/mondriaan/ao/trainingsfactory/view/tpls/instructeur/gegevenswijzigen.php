@@ -5,17 +5,12 @@
 
 
 <div class="container" style="text-align: justify;">
-  <?php if (isset($boodschap)) { ?>
-        <div class="alert alert-info">
-            <strong>Melding!</strong> <?php echo $boodschap; ?>
-        </div>
-    <?php } ?>
     <div class="row">
         <div class="col-xs-6">
             <h3>Gegevens Lid Wijzigen</h3>
         </div>
         <form class="form-horizontal" role="form" method="POST" action="">
-           <h2>Wijzig gegevens</h2>
+           <h2>Wijzigen</h2>
 
            <div class="form-group">
                <label for="firstname" class="col-sm-3 control-label">Voornaam</label>
