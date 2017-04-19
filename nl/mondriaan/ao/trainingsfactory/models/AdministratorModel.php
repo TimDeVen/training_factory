@@ -66,6 +66,39 @@ class AdministratorModel extends AbstractModel {
         return REQUEST_NOTHING_CHANGED;
     }
 
+    public function deleteTrainingsvorm()
+    {
+        $id= filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+
+        if($id===null)
+        {
+            return REQUEST_FAILURE_DATA_INCOMPLETE;
+        }
+        if($id===false)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $sql = "SELECT * FROM `trainingen` WHERE `trainingen`.`id`=:id";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':id', $id);
+        $stmnt->execute();
+        $trainingen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Training');
+
+        if(count($trainingen)===0)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+        $sql = "DELETE FROM `trainingen` WHERE `trainingen`.`id`=:id";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':id', $id);
+        $stmnt->execute();
+        if($stmnt->rowCount()===1){
+            return REQUEST_SUCCESS;
+        }
+        return REQUEST_NOTHING_CHANGED;
+    }
+
     public function addContact()
     {
         $gebruikersnaam= filter_input(INPUT_POST, 'gn');
@@ -157,72 +190,115 @@ class AdministratorModel extends AbstractModel {
 
     public function uitloggen()
     {
-    $_SESSION = array();
-    session_destroy();
+        $_SESSION = array();
+        session_destroy();
     }
 
     public function wijzigAnw()
     {
-    $gebruikersnaam= filter_input(INPUT_POST, 'gn');
-    $voorletter=filter_input(INPUT_POST, 'vl');
-    $tussenvoegsel=filter_input(INPUT_POST, 'tv');
-    $achternaam=filter_input(INPUT_POST, 'an');
-    $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
-    $intern=filter_input(INPUT_POST,'int');
-    $extern=filter_input(INPUT_POST,'ext');
+        $gebruikersnaam= filter_input(INPUT_POST, 'gn');
+        $voorletter=filter_input(INPUT_POST, 'vl');
+        $tussenvoegsel=filter_input(INPUT_POST, 'tv');
+        $achternaam=filter_input(INPUT_POST, 'an');
+        $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+        $intern=filter_input(INPUT_POST,'int');
+        $extern=filter_input(INPUT_POST,'ext');
 
-    if(empty($voorletter)||empty($achternaam)||empty($email)||empty($gebruikersnaam))
-    {
-        return REQUEST_FAILURE_DATA_INCOMPLETE;
+        if(empty($voorletter)||empty($achternaam)||empty($email)||empty($gebruikersnaam))
+        {
+            return REQUEST_FAILURE_DATA_INCOMPLETE;
+        }
+
+        if($email===false)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $gebruiker_id = $this->getGebruiker()->getId();
+
+        $sql="UPDATE `contacten` SET gebruikersnaam=:gebruikersnaam,voorletter=:voorletter"
+                . ",tussenvoegsel=:tussenvoegsel,achternaam=:achternaam,"
+                 . "extern=:extern,intern=:intern,email=:email where `contacten`.`id`= :gebruiker_id; ";
+        $stmnt = $this->db->prepare($sql);
+        $stmnt->bindParam(':gebruikersnaam', $gebruikersnaam);
+        $stmnt->bindParam(':voorletter', $voorletter);
+        $stmnt->bindParam(':tussenvoegsel', $tussenvoegsel);
+        $stmnt->bindParam(':achternaam', $achternaam);
+        $stmnt->bindParam(':extern', $extern);
+        $stmnt->bindParam(':intern', $intern);
+        $stmnt->bindParam(':email', $email);
+        $stmnt->bindParam(':gebruiker_id', $gebruiker_id);
+
+        try
+        {
+            $stmnt->execute();
+        }
+        catch(\PDOEXception $e)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $aantalGewijzigd = $stmnt->rowCount();
+        if($aantalGewijzigd===1)
+        {
+            $this->updateGebruiker();
+            return REQUEST_SUCCESS;
+        }
+        return REQUEST_NOTHING_CHANGED;
     }
 
-    if($email===false)
+    public function wijzigAnwTrainingsvorm()
     {
-        return REQUEST_FAILURE_DATA_INVALID;
-    }
+        $id = filter_input(INPUT_GET, 'id');
+        $description= filter_input(INPUT_POST, 'description');
+        $duration=filter_input(INPUT_POST, 'duration');
+        $extra_costs=filter_input(INPUT_POST, 'extra_costs');
 
-    $gebruiker_id = $this->getGebruiker()->getId();
 
-    $sql="UPDATE `contacten` SET gebruikersnaam=:gebruikersnaam,voorletter=:voorletter"
-            . ",tussenvoegsel=:tussenvoegsel,achternaam=:achternaam,"
-             . "extern=:extern,intern=:intern,email=:email where `contacten`.`id`= :gebruiker_id; ";
-    $stmnt = $this->db->prepare($sql);
-    $stmnt->bindParam(':gebruikersnaam', $gebruikersnaam);
-    $stmnt->bindParam(':voorletter', $voorletter);
-    $stmnt->bindParam(':tussenvoegsel', $tussenvoegsel);
-    $stmnt->bindParam(':achternaam', $achternaam);
-    $stmnt->bindParam(':extern', $extern);
-    $stmnt->bindParam(':intern', $intern);
-    $stmnt->bindParam(':email', $email);
-    $stmnt->bindParam(':gebruiker_id', $gebruiker_id);
+        if(empty($description)||empty($duration)||empty($extra_costs))
+        {
+            return REQUEST_FAILURE_DATA_INCOMPLETE;
+        }
 
-    try
-    {
-        $stmnt->execute();
-    }
-    catch(\PDOEXception $e)
-    {
-        return REQUEST_FAILURE_DATA_INVALID;
-    }
+        if($description===false)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
 
-    $aantalGewijzigd = $stmnt->rowCount();
-    if($aantalGewijzigd===1)
-    {
-        $this->updateGebruiker();
-        return REQUEST_SUCCESS;
-    }
-    return REQUEST_NOTHING_CHANGED;
+        $sql="UPDATE `trainingen` SET description=:description,duration=:duration"
+            . ",extra_costs=:extra_costs where `trainingen`.`id`= :id;";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':description', $description);
+        $stmnt->bindParam(':duration', $duration);
+        $stmnt->bindParam(':extra_costs', $extra_costs);
+        $stmnt->bindParam(':id', $id);
+
+        try
+        {
+            $stmnt->execute();
+        }
+        catch(\PDOEXception $e)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $aantalGewijzigd = $stmnt->rowCount();
+        if($aantalGewijzigd===1)
+        {
+            return REQUEST_SUCCESS;
+        }
+        return REQUEST_NOTHING_CHANGED;
     }
 
     private function updateGebruiker()
     {
-    $gebruiker_id = $this->getGebruiker()->getId();
-    $sql = "SELECT * FROM `contacten` WHERE `contacten`.`id`=:gebruiker_id";
-    $stmnt = $this->db->prepare($sql);
-    $stmnt->bindParam(':gebruiker_id', $gebruiker_id);
-    $stmnt->setFetchMode(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Contact');
-    $stmnt->execute();
-    $_SESSION['gebruiker']= $stmnt->fetch(\PDO::FETCH_CLASS);
+        $gebruiker_id = $this->getGebruiker()->getId();
+        $sql = "SELECT * FROM `personen` WHERE `personen`.`id`=:gebruiker_id";
+        $stmnt = $this->db->prepare($sql);
+        $stmnt->bindParam(':gebruiker_id', $gebruiker_id);
+        $stmnt->setFetchMode(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Persoon');
+        $stmnt->execute();
+        $_SESSION['gebruiker']= $stmnt->fetch(\PDO::FETCH_CLASS);
     }
 
     public function resetWw() {
@@ -368,7 +444,6 @@ class AdministratorModel extends AbstractModel {
 
         try
         {
-
             $stmnt->execute();
         }
         catch(\PDOEXception $e)
@@ -383,8 +458,67 @@ class AdministratorModel extends AbstractModel {
         }
         return REQUEST_FAILURE_DATA_INCOMPLETE;
     }
-	
-	
-	// Pls stop casey, u are dumb!. Yes he is, And he knows it.
+
+    public function addTrainingsvorm()
+    {
+        $description= filter_input(INPUT_POST, 'description');
+        $duration= filter_input(INPUT_POST, 'duration');
+        $extra_costs=filter_input(INPUT_POST, 'extra_costs');
+
+
+        if($description===null)
+        {
+            return REQUEST_FAILURE_DATA_INCOMPLETE;
+        }
+
+        if($duration===false)
+        {
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $sql="INSERT INTO `trainingen` (description,duration,extra_costs)VALUES (:description,:duration,:extra_costs) ";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':description', $description);
+        $stmnt->bindParam(':duration', $duration);
+        $stmnt->bindParam(':extra_costs', $extra_costs);
+
+        try
+        {
+            $stmnt->execute();
+        }
+        catch(\PDOEXception $e)
+        {
+            var_dump($e);
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        if($stmnt->rowCount()===1)
+        {
+            return REQUEST_SUCCESS;
+        }
+        return REQUEST_FAILURE_DATA_INCOMPLETE;
+    }
+
+    public function getTrainingsvormen()
+    {
+        $sql = "SELECT * FROM `trainingen`";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':id', $id);
+        $stmnt->execute();
+        $trainingsvormen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Training');
+        return $trainingsvormen;
+    }
+
+    public function getTrainingsvorm()
+    {
+        $id = filter_input(INPUT_GET, 'id');
+        $sql = "SELECT * FROM `trainingen` WHERE `trainingen`.`id`=:id";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':id', $id);
+        $stmnt->execute();
+        $trainingsvormen = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Training');
+        return $trainingsvormen[0];
+    }
+
 
 }

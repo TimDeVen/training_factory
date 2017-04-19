@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35243a2a-9fc2-44be-a5c0-308b7dd9f550" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/addInstructeur.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/add.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bezoeker.css" afterPath="$PROJECT_DIR$/css/bezoeker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/member.css" afterPath="$PROJECT_DIR$/css/member.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/telefoonlijst.css" afterPath="$PROJECT_DIR$/css/telefoonlijst.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheer.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerInstructeurs.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerInstructeurs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/header.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php" afterPath="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -41,35 +35,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AdministratorController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addTrainingsvorm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/addTrainingsvorm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AdministratorModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1036">
-              <caret line="384" column="5" selection-start-line="384" selection-start-column="5" selection-end-line="384" selection-end-column="5" />
+            <state relative-caret-position="254">
+              <caret line="466" column="0" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
               <folding>
-                <marker date="1492622137672" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
-                <marker date="1492622137672" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
-                <marker date="1492622137672" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
-                <marker date="1492622137672" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
-                <marker date="1492622137672" expanded="true" signature="1682:1730" ph="DELETE FROM " />
-                <marker date="1492622137672" expanded="true" signature="5451:5695" ph="UPDATE `cont... " />
-                <marker date="1492622137672" expanded="true" signature="6575:6637" ph="SELECT * FRO... contacten" />
-                <marker date="1492622137672" expanded="true" signature="7041:7080" ph="SELECT * FRO... personen" />
-                <marker date="1492622137672" expanded="true" signature="8047:8129" ph="UPDATE `cont... " />
-                <marker date="1492622137672" expanded="true" signature="8529:9271" ph="SELECT DATE_... lessons" />
-                <marker date="1492622137672" expanded="true" signature="9113:9225" ph="SELECT lesso... registrations" />
-                <marker date="1492622137672" expanded="true" signature="10507:10807" ph="INSERT INTO `personen`... " />
-                <marker date="1492622137672" expanded="true" signature="10901:11202" ph="INSERT INTO `personen`... " />
+                <marker date="1492635952637" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
+                <marker date="1492635952637" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
+                <marker date="1492635952637" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
+                <marker date="1492635952637" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
+                <marker date="1492635952637" expanded="true" signature="1682:1730" ph="DELETE FROM " />
+                <marker date="1492635952637" expanded="true" signature="2290:2344" ph="SELECT * FRO... trainingen" />
+                <marker date="1492635952637" expanded="true" signature="2666:2718" ph="DELETE FROM " />
+                <marker date="1492635952637" expanded="true" signature="6514:6766" ph="UPDATE `cont... " />
+                <marker date="1492635952637" expanded="true" signature="8173:8282" ph="UPDATE `pers... " />
+                <marker date="1492635952637" expanded="true" signature="8173:8309" ph="UPDATE `pers... " />
+                <marker date="1492635952637" expanded="true" signature="8173:8311" ph="UPDATE `trai... " />
+                <marker date="1492635952637" expanded="true" signature="9029:9089" ph="SELECT * FRO... contacten" />
+                <marker date="1492635952637" expanded="true" signature="9513:9552" ph="SELECT * FRO... personen" />
+                <marker date="1492635952637" expanded="true" signature="10519:10601" ph="UPDATE `cont... " />
+                <marker date="1492635952637" expanded="true" signature="11001:11743" ph="SELECT DATE_... lessons" />
+                <marker date="1492635952637" expanded="true" signature="11585:11697" ph="SELECT lesso... registrations" />
+                <marker date="1492635952637" expanded="true" signature="12979:13279" ph="INSERT INTO `personen`... " />
+                <marker date="1492635952637" expanded="true" signature="13373:13674" ph="INSERT INTO `personen`... " />
+                <marker date="1492635952637" expanded="true" signature="15081:15184" ph="INSERT INTO `trainingen`... " />
+                <marker date="1492635952637" expanded="true" signature="15798:15824" ph="SELECT * FRO... trainingen" />
+                <marker date="1492635952637" expanded="true" signature="16176:16209" ph="SELECT * FRO... trainingen" />
+                <marker date="1492635952637" expanded="true" signature="16176:16228" ph="SELECT * FRO... trainingen" />
+                <marker date="1492635952637" expanded="true" signature="16176:16230" ph="SELECT * FRO... trainingen" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdministratorController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php">
+      <file leaf-file-name="beheerTrainingsvormen.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerTrainingsvormen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+            <state relative-caret-position="119">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -78,21 +102,19 @@
       <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="107" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="107" />
+            <state relative-caret-position="306">
+              <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lessenbeheer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/lessenbeheer.php">
+      <file leaf-file-name="Training.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,10 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/framework/error/FrameworkException.php" />
-        <option value="$PROJECT_DIR$/framework/models/db/Entiteit.php" />
-        <option value="$PROJECT_DIR$/framework/models/db/Contact.php" />
-        <option value="$PROJECT_DIR$/framework/models/db/Afdeling.php" />
         <option value="$PROJECT_DIR$/framework/controllers/MedewerkerController.php" />
         <option value="$PROJECT_DIR$/framework/view/tpls/bezoeker/includes/header.php" />
         <option value="$PROJECT_DIR$/framework/models/AbstractModel.php" />
@@ -152,10 +170,8 @@
         <option value="$PROJECT_DIR$/framework/controllers/SecretaresseController.php" />
         <option value="$PROJECT_DIR$/../../alias/phpmyadmin.conf" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Afdeling.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Persoon.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Registration.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" />
         <option value="$PROJECT_DIR$/ao/php/framework/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/MedewerkerController.php" />
@@ -185,9 +201,15 @@
         <option value="$PROJECT_DIR$/css/bezoeker.css" />
         <option value="$PROJECT_DIR$/css/member.css" />
         <option value="$PROJECT_DIR$/css/administrator.css" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
-        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" />
         <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/lessenBeheer.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/anwTrainingsvorm.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerTrainingsvormen.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/addTrainingsvorm.php" />
+        <option value="$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php" />
       </list>
     </option>
   </component>
@@ -456,6 +478,40 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="training_factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="training_factory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mondriaan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ao" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trainingsfactory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controls" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -481,22 +537,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kartcentrum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../telefoonlijst" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\training_factory\nl\mondriaan\ao\trainingsfactory\view\tpls\administrator" />
+      <recent name="C:\wamp64\www\trainingfactory\nl\mondriaan\ao\trainingsfactory\view\tpls\administrator\includes" />
+      <recent name="C:\wamp64\www\trainingfactory\nl\mondriaan\ao\trainingsfactory\models\db" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\telefoonlijst" />
       <recent name="C:\wamp64\www\telefoonlijst\nl\mondriaan\ict\ao\php\framework\view" />
       <recent name="C:\wamp64\www\telefoonlijst\nl\mondriaan\ict\ao\php\framework\models\db" />
       <recent name="C:\wamp64\www\telefoonlijst\nl\mondriaan\ict\ao\php\framework\models" />
       <recent name="C:\wamp64\www\telefoonlijst\nl\mondriaan\ict\ao\php\framework\controls" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\training_factory\nl\mondriaan\ao\trainingsfactory\view\tpls\administrator" />
-      <recent name="C:\wamp64\www\trainingfactory\nl\mondriaan\ao\trainingsfactory\view\tpls\administrator\includes" />
-      <recent name="C:\wamp64\www\trainingfactory\nl\mondriaan\ao\trainingsfactory\models\db" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -594,12 +650,12 @@
       <workItem from="1492085713434" duration="3185000" />
       <workItem from="1492433143693" duration="7269000" />
       <workItem from="1492614943361" duration="42000" />
-      <workItem from="1492614996272" duration="5164000" />
+      <workItem from="1492614996272" duration="17857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56461000" />
+    <option name="totallyTimeSpent" value="69154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -623,6 +679,25 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15820312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -645,27 +720,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../wampmanager.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../alias/phpmyadmin.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ao/php/framework/error/FrameworkException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ao/php/framework/utils/Foto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -677,27 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -781,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Persoon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="70" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nbproject/project.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -823,14 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1201">
-          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/toevoegen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -842,14 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/InstructeurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -908,22 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/anw.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/BezoekerModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
@@ -933,14 +927,6 @@
             <marker date="1492099462933" expanded="true" signature="2044:2339" ph="INSERT INTO `personen`... " />
             <marker date="1492099462933" expanded="true" signature="2433:2729" ph="INSERT INTO `personen`... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerInstructeurs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,14 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/telefoonlijst.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -1000,51 +978,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php">
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/lessenbeheer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="107" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="107" />
+        <state relative-caret-position="595">
+          <caret line="35" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php">
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+        <state relative-caret-position="697">
+          <caret line="41" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Les.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Persoon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="70" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/db/Training.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/anw.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerInstructeurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="43" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/includes/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/BezoekerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/InstructeurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="929">
+          <caret line="80" column="47" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/anwTrainingsvorm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="e#1396#1415#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/beheerTrainingsvormen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/models/AdministratorModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1036">
-          <caret line="384" column="5" selection-start-line="384" selection-start-column="5" selection-end-line="384" selection-end-column="5" />
+        <state relative-caret-position="254">
+          <caret line="466" column="0" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
           <folding>
-            <marker date="1492622137672" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
-            <marker date="1492622137672" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
-            <marker date="1492622137672" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
-            <marker date="1492622137672" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
-            <marker date="1492622137672" expanded="true" signature="1682:1730" ph="DELETE FROM " />
-            <marker date="1492622137672" expanded="true" signature="5451:5695" ph="UPDATE `cont... " />
-            <marker date="1492622137672" expanded="true" signature="6575:6637" ph="SELECT * FRO... contacten" />
-            <marker date="1492622137672" expanded="true" signature="7041:7080" ph="SELECT * FRO... personen" />
-            <marker date="1492622137672" expanded="true" signature="8047:8129" ph="UPDATE `cont... " />
-            <marker date="1492622137672" expanded="true" signature="8529:9271" ph="SELECT DATE_... lessons" />
-            <marker date="1492622137672" expanded="true" signature="9113:9225" ph="SELECT lesso... registrations" />
-            <marker date="1492622137672" expanded="true" signature="10507:10807" ph="INSERT INTO `personen`... " />
-            <marker date="1492622137672" expanded="true" signature="10901:11202" ph="INSERT INTO `personen`... " />
+            <marker date="1492635952637" expanded="true" signature="522:546" ph="SELECT * FRO... personen" />
+            <marker date="1492635952637" expanded="true" signature="522:570" ph="SELECT * FRO... personen" />
+            <marker date="1492635952637" expanded="true" signature="820:871" ph="SELECT * FRO... personen" />
+            <marker date="1492635952637" expanded="true" signature="1337:1387" ph="SELECT * FRO... personen" />
+            <marker date="1492635952637" expanded="true" signature="1682:1730" ph="DELETE FROM " />
+            <marker date="1492635952637" expanded="true" signature="2290:2344" ph="SELECT * FRO... trainingen" />
+            <marker date="1492635952637" expanded="true" signature="2666:2718" ph="DELETE FROM " />
+            <marker date="1492635952637" expanded="true" signature="6514:6766" ph="UPDATE `cont... " />
+            <marker date="1492635952637" expanded="true" signature="8173:8282" ph="UPDATE `pers... " />
+            <marker date="1492635952637" expanded="true" signature="8173:8309" ph="UPDATE `pers... " />
+            <marker date="1492635952637" expanded="true" signature="8173:8311" ph="UPDATE `trai... " />
+            <marker date="1492635952637" expanded="true" signature="9029:9089" ph="SELECT * FRO... contacten" />
+            <marker date="1492635952637" expanded="true" signature="9513:9552" ph="SELECT * FRO... personen" />
+            <marker date="1492635952637" expanded="true" signature="10519:10601" ph="UPDATE `cont... " />
+            <marker date="1492635952637" expanded="true" signature="11001:11743" ph="SELECT DATE_... lessons" />
+            <marker date="1492635952637" expanded="true" signature="11585:11697" ph="SELECT lesso... registrations" />
+            <marker date="1492635952637" expanded="true" signature="12979:13279" ph="INSERT INTO `personen`... " />
+            <marker date="1492635952637" expanded="true" signature="13373:13674" ph="INSERT INTO `personen`... " />
+            <marker date="1492635952637" expanded="true" signature="15081:15184" ph="INSERT INTO `trainingen`... " />
+            <marker date="1492635952637" expanded="true" signature="15798:15824" ph="SELECT * FRO... trainingen" />
+            <marker date="1492635952637" expanded="true" signature="16176:16209" ph="SELECT * FRO... trainingen" />
+            <marker date="1492635952637" expanded="true" signature="16176:16228" ph="SELECT * FRO... trainingen" />
+            <marker date="1492635952637" expanded="true" signature="16176:16230" ph="SELECT * FRO... trainingen" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/instructeur/lessenbeheer.php">
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/view/tpls/administrator/addTrainingsvorm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="578">
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nl/mondriaan/ao/trainingsfactory/controls/AdministratorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>

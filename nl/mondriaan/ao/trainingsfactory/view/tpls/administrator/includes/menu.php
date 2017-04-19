@@ -17,7 +17,6 @@
 <div class="row">
     <div class="col-xs-6 col-md-4">
         <center><img src="img/vechtsport1.jpg" alt="" width="250px" height="200px"/></center>
-
     </div>
 
     <div class="col-xs-6 col-md-4">

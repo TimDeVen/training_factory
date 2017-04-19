@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 17 apr 2017 om 15:56
+-- Gegenereerd op: 19 apr 2017 om 21:08
 -- Serverversie: 5.7.14
 -- PHP-versie: 5.6.25
 
@@ -50,11 +50,11 @@ INSERT INTO `lessons` (`id`, `time`, `date`, `location`, `max_persons`, `trainin
 
 CREATE TABLE `personen` (
   `id` int(9) NOT NULL,
-  `loginname` varchar(9) NOT NULL,
-  `password` varchar(9) NOT NULL,
-  `firstname` varchar(9) NOT NULL,
-  `preprovision` varchar(9) NOT NULL,
-  `lastname` varchar(9) NOT NULL,
+  `loginname` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `preprovision` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
   `dateofbirth` date NOT NULL,
   `gender` varchar(9) NOT NULL,
   `emailadress` varchar(255) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE `personen` (
 INSERT INTO `personen` (`id`, `loginname`, `password`, `firstname`, `preprovision`, `lastname`, `dateofbirth`, `gender`, `emailadress`, `hiring_date`, `salary`, `street`, `postal_code`, `place`, `role`) VALUES
 (2, 'casey', 'qwerty', 'Casey', '', 'Vianen', '1998-10-05', 'Man', 'casey.vianen@gmail.com', '2017-04-04', 20, 'soestdijksekade 609', '2574 BH', 'Den Haag', 'member'),
 (3, 'admin', 'qwerty', 'Tim', 'van de ', 'Ven', '2017-04-12', 'Man', 'admin@mondriaanict.nl', NULL, NULL, NULL, NULL, 'Den Haag', 'administrator'),
-(5, 'Test', 'qwerty', 'Test', '', 'Test', '2017-04-04', '', '', NULL, NULL, NULL, NULL, NULL, 'instructeur');
+(5, 'instructeur', 'qwerty', 'Henk', 'van', 'Kaas', '2017-04-04', '', 'henk@mondriaanict.nl', '2017-04-12', 30, NULL, '4647HD', 'Den Haag', 'instructeur');
 
 -- --------------------------------------------------------
 
@@ -93,7 +93,7 @@ CREATE TABLE `registrations` (
 --
 
 INSERT INTO `registrations` (`id`, `payment`, `lesson_id`, `person_id`) VALUES
-(1, 1, 1, 3);
+(1, 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -113,7 +113,10 @@ CREATE TABLE `trainingen` (
 --
 
 INSERT INTO `trainingen` (`id`, `description`, `duration`, `extra_costs`) VALUES
-(1, 'Boks les', 90, 20);
+(1, 'Boks les', 90, 20),
+(3, 'MMA', 110, 50),
+(4, 'Test', 90, 50),
+(5, 'Testerino', 110, 110);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -162,7 +165,7 @@ ALTER TABLE `lessons`
 -- AUTO_INCREMENT voor een tabel `personen`
 --
 ALTER TABLE `personen`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT voor een tabel `registrations`
 --
@@ -172,7 +175,7 @@ ALTER TABLE `registrations`
 -- AUTO_INCREMENT voor een tabel `trainingen`
 --
 ALTER TABLE `trainingen`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Beperkingen voor geëxporteerde tabellen
 --
