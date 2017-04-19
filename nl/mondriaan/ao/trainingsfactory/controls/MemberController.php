@@ -27,13 +27,16 @@ class MemberController extends AbstractController
     {
       $gebruiker = $this->model->getGebruiker();
       $this->view->set("gebruiker",$gebruiker);
+
+      $lessen = $this->model->getIngeschrevenLessen();
+      $this->view->set('lessen',$lessen);
     }
     protected function inschrijvenAction()
     {
       $gebruiker = $this->model->getGebruiker();
       $this->view->set("gebruiker",$gebruiker);
-      
-      
+
+
     }
 
     protected function gegevenswijzigenAction()
