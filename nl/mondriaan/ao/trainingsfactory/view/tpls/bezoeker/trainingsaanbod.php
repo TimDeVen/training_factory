@@ -31,12 +31,12 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-12">
-          <div class="ctas text-center">
+            <div class="ctas text-center">
 
-        </div>
-          </div>
-        </div>
+            </div>
+      </div>
+    </div>
+</div>
 
 </body>
-</html>
 <?php include 'includes/footer.php'; ?>
