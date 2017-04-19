@@ -52,5 +52,95 @@ class MemberModel extends AbstractModel
         $activiteiten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');
         return $activiteiten;
     }
-  
+
+
+    public function wijziggegevens()
+    {
+        $firstname = filter_input(INPUT_POST, 'firstname');
+        $preprovision = filter_input(INPUT_POST, 'preprovision');
+        $lastname = filter_input(INPUT_POST, 'lastname');
+        $dateofbirth = filter_input(INPUT_POST, 'dateofbirth');
+        $loginname = filter_input(INPUT_POST, 'loginname');
+        $email = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password');
+        $gender = filter_input(INPUT_POST, 'gender');
+        $street = filter_input(INPUT_POST, 'street');
+        $postal = filter_input(INPUT_POST, 'postal');
+        $place = filter_input(INPUT_POST, 'place');
+        $id = $this->getGebruiker()->getId();
+
+        if(empty($password)) {
+            $sql = "UPDATE `personen`
+                    SET firstname = :firstname,
+                        preprovision = :preprovision,
+                        lastname = :lastname,
+                        dateofbirth = :dateofbirth,
+                        loginname = :loginname,
+                        emailadress = :email,
+                        gender = :gender,
+                        street = :street,
+                        postal_code = :postal,
+                        place = :place,
+                        password = 'qwerty
+                          where id = :id";
+            $stmnt = $this->dbh->prepare($sql);
+
+        } else {
+
+            $sql = "UPDATE `personen`
+                    SET firstname = :firstname,
+                    preprovision = :preprovision,
+                    lastname = :lastname,
+                    dateofbirth = :dateofbirth,
+                    loginname = :loginname,
+                    emailadress = :email,
+                    gender = :gender,
+                    street = :street,
+                    postal_code = :postal,
+                    place = :place,
+                    password = :password
+                    where id = :id";
+            $stmnt = $this->dbh->prepare($sql);
+            $stmnt->bindParam(':password', $password);
+        }
+
+        $stmnt->bindParam(':firstname', $firstname);
+        $stmnt->bindParam(':preprovision', $preprovision);
+        $stmnt->bindParam(':lastname', $lastname);
+        $stmnt->bindParam(':dateofbirth', $dateofbirth);
+        $stmnt->bindParam(':loginname', $loginname);
+        $stmnt->bindParam(':email', $email);
+        $stmnt->bindParam(':gender', $gender);
+        $stmnt->bindParam(':street', $street);
+        $stmnt->bindParam(':postal', $postal);
+        $stmnt->bindParam(':place', $place);
+        $stmnt->bindParam(':id', $id);
+
+        try {
+            $stmnt->execute();
+        } catch(\PDOEXception $e) {
+            var_dump($e);
+            return REQUEST_FAILURE_DATA_INVALID;
+        }
+
+        $aantalGewijzigd = $stmnt->rowCount();
+         if($aantalGewijzigd===1)
+         {
+             $this->updateGebruiker();
+             return REQUEST_SUCCESS;
+         }
+
+        return REQUEST_NOTHING_CHANGED;
+  }
+    public function updateGebruiker() {
+        $gebruiker_id = $this->getGebruiker()->getId();
+        $sql = "SELECT * FROM `personen` WHERE `personen`.`id` = :gebruiker_id";
+        $stmnt = $this->dbh->prepare($sql);
+        $stmnt->bindParam(':gebruiker_id', $gebruiker_id);
+        $stmnt->setFetchMode(\PDO::FETCH_CLASS, __NAMESPACE__ . '\db\Persoon');
+        $stmnt->execute();
+        $_SESSION['gebruiker'] = $stmnt->fetch(\PDO::FETCH_CLASS);
+    }
+
+
 }

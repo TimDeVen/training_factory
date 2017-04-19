@@ -21,7 +21,7 @@
         <div class="col-xs-6 col-md-4 placing">
             <?php echo $gebruiker->getName(); ?><br/>
             -<?php echo $gebruiker->getRole(); ?>-<br/>
-            <input class="btn btn-lg btn-secondary btn-block" type="submit" value="Uitloggen">
+            <a href="?control=instructeur&action=uitloggen"><input  class="btn btn-lg btn-secondary btn-block" type="submit" value="Uitloggen"></a>
         </div>
 
     </div>

@@ -27,7 +27,6 @@ class MemberController extends AbstractController
     {
       $gebruiker = $this->model->getGebruiker();
       $this->view->set("gebruiker",$gebruiker);
-
       $lessen = $this->model->getIngeschrevenLessen();
       $this->view->set('lessen',$lessen);
     }
@@ -35,13 +34,28 @@ class MemberController extends AbstractController
     {
       $gebruiker = $this->model->getGebruiker();
       $this->view->set("gebruiker",$gebruiker);
-
-
     }
+    protected function gegevenswijzigenAction() {
+        $this->view->set("gebruiker", $this->model->getGebruiker());
 
-    protected function gegevenswijzigenAction()
-    {
-      $gebruiker = $this->model->getGebruiker();
-      $this->view->set("gebruiker",$gebruiker);
+        if($this->model->isPostLeeg()) {
+            $this->view->set("msg", "Vul uw gegevens in");
+        } else {
+            switch($this->model->wijziggegevens()) {
+                case REQUEST_SUCCESS:
+                    $this->view->set("msg", "U heeft successvol uw gegevens gewijzigd!");
+                    $this->forward("gegevenswijzigen");
+                    break;
+                case REQUEST_FAILURE_DATA_INVALID:
+                    $this->view->set("msg", "Emailadres niet correct of gebruikersnaam bestaat al");
+                    break;
+                case REQUEST_FAILURE_DATA_INCOMPLETE:
+                    $this->view->set("msg", "Niet alle gegevens zijn ingevuld");
+                    break;
+                case REQUEST_NOTHING_CHANGED:
+                    $this->view->set("msg", "Er niks te wijzigen");
+                    break;
+            }
+        }
     }
 }

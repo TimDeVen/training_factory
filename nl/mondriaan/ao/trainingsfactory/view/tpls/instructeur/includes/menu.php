@@ -7,7 +7,7 @@
           <li><a href="?control=instructeur&action=default">Home</a></li>
           <li><a href="?control=instructeur&action=lessenbeheer">Lessen beheren</a></li>
           <li><a href="?control=instructeur&action=toevoegen">Les toevoegen</a></li>
-          <li><a href="?control=instructeur&action=gegevens">Gegevens wijzigen</a></li>
+          <li><a href="?control=instructeur&action=gegevenswijzigen">Gegevens wijzigen</a></li> 
         </ul>
      </div>
 
