@@ -34,7 +34,7 @@ class AdministratorController extends AbstractController
         $this->view->set('users',$users);
     }
     
-    protected function addAction()
+    protected function addInstructeurAction()
     {
         if($this->model->isPostLeeg())
         {
@@ -42,7 +42,7 @@ class AdministratorController extends AbstractController
         }
         else
         {   
-            $result=$this->model->addUser();
+            $result=$this->model->addInstructeur();
             switch($result)
             {
                 case IMAGE_FAILURE_SIZE_EXCEEDED:
@@ -63,7 +63,7 @@ class AdministratorController extends AbstractController
                     break;
                 case REQUEST_SUCCESS:
                     $this->view->set("msg", "Contact is toegevoegd.");
-                    $this->forward("beheer");
+                    $this->forward("beheerInstructeurs");
                     break;  
             }  
         }

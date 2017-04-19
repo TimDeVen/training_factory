@@ -5,7 +5,7 @@
 
 
 <div class="container" style="text-align: justify;">
-    <h2>Lessenbeheer</h2>
+    <h2>Beheer Instructeurs</h2>
     <?php if (isset($boodschap)) { ?>
         <div class="alert alert-info">
             <strong>Melding!</strong> <?php echo $boodschap; ?>
@@ -39,7 +39,7 @@
         ?>
         <tr>
             <td>
-            <a href="?control=administrator&action=addInstructeur&id=<?php echo $instructeur->getId(); ?>" >Add</a>
+            <a href="?control=administrator&action=addInstructeur">Add</a>
             </td>
         </tr>
         </tbody>

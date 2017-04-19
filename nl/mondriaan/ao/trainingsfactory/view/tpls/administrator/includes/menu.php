@@ -7,7 +7,7 @@
           <li><a href="?control=administrator&action=default">Home</a></li>
           <li><a href="?control=administrator&action=beheer">Members beheren</a></li>
           <li><a href="?control=administrator&action=beheerInstructeurs">Instructeurs beheren</a></li>
-          <li><a href="?control=administrator&action=gegevens">Gegevens wijzigen</a></li>
+          <li><a href="?control=administrator&action=beheerTrainingsvormen">Beheer Trainingsvormen</a></li>
         </ul>
      </div>
 
