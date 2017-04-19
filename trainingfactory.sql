@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 apr 2017 om 21:08
+-- Gegenereerd op: 19 apr 2017 om 21:23
 -- Serverversie: 5.7.14
 -- PHP-versie: 5.6.25
 
@@ -56,7 +56,7 @@ CREATE TABLE `personen` (
   `preprovision` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `dateofbirth` date NOT NULL,
-  `gender` varchar(9) NOT NULL,
+  `gender` varchar(255) NOT NULL,
   `emailadress` varchar(255) NOT NULL,
   `hiring_date` date DEFAULT NULL,
   `salary` int(9) DEFAULT NULL,
@@ -103,7 +103,7 @@ INSERT INTO `registrations` (`id`, `payment`, `lesson_id`, `person_id`) VALUES
 
 CREATE TABLE `trainingen` (
   `id` int(9) NOT NULL,
-  `description` varchar(9) NOT NULL,
+  `description` varchar(255) NOT NULL,
   `duration` int(9) NOT NULL,
   `extra_costs` int(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -116,7 +116,8 @@ INSERT INTO `trainingen` (`id`, `description`, `duration`, `extra_costs`) VALUES
 (1, 'Boks les', 90, 20),
 (3, 'MMA', 110, 50),
 (4, 'Test', 90, 50),
-(5, 'Testerino', 110, 110);
+(5, 'Testerino', 110, 110),
+(6, 'fjdsg', 5454, 5435);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -175,7 +176,7 @@ ALTER TABLE `registrations`
 -- AUTO_INCREMENT voor een tabel `trainingen`
 --
 ALTER TABLE `trainingen`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Beperkingen voor geëxporteerde tabellen
 --

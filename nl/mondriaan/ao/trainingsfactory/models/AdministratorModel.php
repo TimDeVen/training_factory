@@ -405,7 +405,6 @@ class AdministratorModel extends AbstractModel {
         $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
         $dateofbirth=filter_input(INPUT_POST,'dateofbirth');
 
-        var_dump($_POST);
 
         if($email===null)
         {
