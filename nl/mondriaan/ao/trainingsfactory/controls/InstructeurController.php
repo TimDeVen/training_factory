@@ -113,4 +113,10 @@ class InstructeurController extends AbstractController
             }
         }
     }
+
+
+    protected function deelnemersAction() {
+        $deelnemers = $this->model->getDeelnemers();
+        $this->view->set("deelnemers",$deelnemers);
+    }
 }

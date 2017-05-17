@@ -146,7 +146,7 @@ class InstructeurModel extends AbstractModel
                         street = :street,
                         postal_code = :postal,
                         place = :place,
-                        password = 'qwerty
+                        password = 'qwerty'
                           where id = :id";
             $stmnt = $this->dbh->prepare($sql);
 
@@ -206,4 +206,27 @@ class InstructeurModel extends AbstractModel
       $stmnt->execute();
       $_SESSION['gebruiker'] = $stmnt->fetch(\PDO::FETCH_CLASS);
   }
+
+    public function getDeelnemers() {
+        $sql=' SELECT DATE_FORMAT(`lessons`.`date`, "%d-%m-%Y") as `datum`, 
+           DATE_FORMAT(`lessons`.`time`,"%H:%i") as `tijd`, 
+           `trainingen`.`extra_costs` as `prijs`, 
+           `lessons`.`id` as `id`, 
+           `trainingen`.`description` as `soort` ,
+           `lessons`.`max_persons` as `max_deelnemers`,
+           `registrations` . `payment` as `betaald`
+           FROM `lessons` 
+            JOIN `trainingen` on `lessons`.`training_id` = `trainingen`.`id`
+            JOIN `registrations` on `lessons`.`id` = `registrations`.`id`
+            WHERE `lessons`.`id` IN (SELECT lesson_id FROM `registrations` 
+                                    WHERE `registrations`.`person_id`=:id)
+            order by  DATE(`lessons`.`date`)';
+
+        $stmnt = $this->dbh->prepare($sql);
+        $id=$this->getGebruiker()->getId();
+        $stmnt->bindParam(':id',$id );
+        $stmnt->execute();
+        $activiteiten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');
+        return $activiteiten;
+    }
 }
