@@ -227,6 +227,7 @@ class InstructeurModel extends AbstractModel
         $stmnt->bindParam(':id',$id );
         $stmnt->execute();
         $activiteiten = $stmnt->fetchAll(\PDO::FETCH_CLASS,__NAMESPACE__.'\db\Les');
+        var_dump($activiteiten);
         return $activiteiten;
     }
 }
